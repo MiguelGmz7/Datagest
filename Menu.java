@@ -5,8 +5,11 @@
 package com.app;
 
 import java.awt.Color;
+import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
@@ -1845,7 +1848,11 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_exit_labelMouseClicked
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-        new Clientes().setVisible(true);
+        try {
+            new Clientes().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
@@ -1962,7 +1969,11 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_Tb_clientes1MouseClicked
 
     private void login_btm6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseClicked
-        new Insumos_insert().setVisible(true);
+        try {
+            new Insumos_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm6MouseClicked
 
     private void login_btm6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseEntered
@@ -2068,8 +2079,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_Tb_clientes2MouseClicked
 
     private void login_btm10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseClicked
-        // TODO add your handling code here:
-        new Personal_insert().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            new Personal_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm10MouseClicked
 
     private void login_btm10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseEntered
@@ -2172,8 +2187,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_Tb_clientes3MouseClicked
 
     private void login_btm14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseClicked
-        // TODO add your handling code here:
-        new Provedores_insert().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            new Provedores_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_login_btm14MouseClicked
 
