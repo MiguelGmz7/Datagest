@@ -60,14 +60,14 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="770" y="40" width="490" height="40"/>
+              <AbsoluteConstraints x="780" y="40" width="480" height="40"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="490" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="480" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -377,16 +377,16 @@
                       <Font name="Roboto Light" size="18" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="6">
+                      <StringArray count="7">
                         <StringItem index="0" value="&#xa0;"/>
-                        <StringItem index="1" value="nombre"/>
-                        <StringItem index="2" value="email"/>
-                        <StringItem index="3" value="telefono"/>
-                        <StringItem index="4" value="direccion"/>
-                        <StringItem index="5" value="activo"/>
+                        <StringItem index="1" value="cliente_id"/>
+                        <StringItem index="2" value="nombre"/>
+                        <StringItem index="3" value="email"/>
+                        <StringItem index="4" value="telefono"/>
+                        <StringItem index="5" value="direccion"/>
+                        <StringItem index="6" value="activo"/>
                       </StringArray>
                     </Property>
-                    <Property name="selectedIndex" type="int" value="2"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                   <Events>

@@ -217,14 +217,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 490, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, 480, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -382,8 +382,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "nombre", "email", "telefono", "direccion", "activo" }));
-        Campo_combo.setSelectedIndex(2);
+        Campo_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "cliente_id", "nombre", "email", "telefono", "direccion", "activo" }));
         Campo_combo.setToolTipText("");
         Campo_combo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
