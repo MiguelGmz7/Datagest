@@ -6,6 +6,7 @@ package com.app;
 
 import java.awt.Color;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -19,8 +20,25 @@ public class Personal_insert extends javax.swing.JFrame {
     /**
      * Creates new form Clientes
      */
-    public Personal_insert() {
+    public Personal_insert() throws SQLException {
         initComponents();
+        id.setText(sacarId());
+    }
+    
+    private String sacarId() throws SQLException{
+        String sql = "select max(personal_id) from personal;";
+        String num = null;
+        int val = 0;
+        Cconexion conexion = new Cconexion();
+        
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql);
+        while(rs.next()){
+           val = rs.getInt(1);
+        }
+        val += 1;
+        num = String.valueOf(val);
+        return num;
     }
 
     /**
@@ -39,6 +57,7 @@ public class Personal_insert extends javax.swing.JFrame {
         selector = new javax.swing.JPanel();
         exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
+        id = new javax.swing.JLabel();
         label_c = new javax.swing.JLabel();
         Nombre1_field = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -79,7 +98,7 @@ public class Personal_insert extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Insertar");
+        jLabel1.setText("Insertar Registro");
 
         selector.setOpaque(false);
         selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -145,23 +164,31 @@ public class Personal_insert extends javax.swing.JFrame {
             .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        id.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        id.setForeground(new java.awt.Color(255, 255, 255));
+        id.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
-            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(selector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(15, 15, 15))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(6, 6, 6))
         );
 
         label_c.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -417,14 +444,12 @@ public class Personal_insert extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Act_rb, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(label_c5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Pass_field)
-                                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(label_c6))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Tel_field)
-                                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(label_c7))
+                                .addComponent(Pass_field, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label_c6, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Tel_field, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label_c7, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Ape_field, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
                                 .addComponent(Email_field, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING))))
@@ -553,6 +578,7 @@ public class Personal_insert extends javax.swing.JFrame {
             }
             menu.resetTable();
         }
+        setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
@@ -691,7 +717,11 @@ public class Personal_insert extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Personal_insert().setVisible(true);
+                try {
+                    new Personal_insert().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Personal_insert.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -708,6 +738,7 @@ public class Personal_insert extends javax.swing.JFrame {
     private javax.swing.JTextField Tel_field;
     private javax.swing.JLabel exit_label;
     private javax.swing.JPanel exit_panel;
+    private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;

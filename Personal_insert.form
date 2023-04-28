@@ -72,16 +72,12 @@
                                       <Component id="Act_rb" min="-2" pref="19" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="label_c5" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Pass_field" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jSeparator6" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
-                                      <Component id="label_c6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Tel_field" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jSeparator7" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
-                                      <Component id="label_c7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="Pass_field" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator6" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
+                                  <Component id="label_c6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Tel_field" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator7" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
+                                  <Component id="label_c7" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="Ape_field" alignment="0" pref="333" max="32767" attributes="0"/>
                                   <Component id="Email_field" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator5" alignment="0" max="32767" attributes="0"/>
@@ -192,12 +188,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="selector" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="205" max="-2" attributes="0"/>
-                      <EmptySpace pref="459" max="32767" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="id" min="-2" pref="354" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="selector" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -205,8 +203,11 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="selector" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="id" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -220,7 +221,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Insertar"/>
+                <Property name="text" type="java.lang.String" value="Insertar Registro"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="selector">
@@ -299,6 +300,17 @@
                 </Container>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="id">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Roboto" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel2"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="label_c">
