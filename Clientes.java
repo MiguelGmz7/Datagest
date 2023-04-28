@@ -5,6 +5,9 @@
 package com.app;
 
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,9 +18,27 @@ public class Clientes extends javax.swing.JFrame {
     int Xmouse, Ymouse;
     /**
      * Creates new form Clientes
+     * @throws java.sql.SQLException
      */
-    public Clientes() {
+    public Clientes() throws SQLException {
         initComponents();
+        id.setText(sacarId());
+    }
+    
+    private String sacarId() throws SQLException{
+        String sql = "select max(cliente_id) from clientes;";
+        String num = null;
+        int val = 0;
+        Cconexion conexion = new Cconexion();
+        
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql);
+        while(rs.next()){
+           val = rs.getInt(1);
+        }
+        val += 1;
+        num = String.valueOf(val);
+        return num;
     }
 
     /**
@@ -35,6 +56,7 @@ public class Clientes extends javax.swing.JFrame {
         selector = new javax.swing.JPanel();
         exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
+        id = new javax.swing.JLabel();
         label_c = new javax.swing.JLabel();
         Nombre_field = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -64,7 +86,7 @@ public class Clientes extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Insertar");
+        jLabel1.setText("Insertar Registro");
 
         selector.setOpaque(false);
         selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -130,23 +152,31 @@ public class Clientes extends javax.swing.JFrame {
             .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        id.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        id.setForeground(new java.awt.Color(255, 255, 255));
+        id.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(selector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(15, 15, 15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         label_c.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -349,7 +379,7 @@ public class Clientes extends javax.swing.JFrame {
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FondoLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(28, 28, 28)
                 .addComponent(label_c)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Nombre_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,7 +411,7 @@ public class Clientes extends javax.swing.JFrame {
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panel_reset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 16, Short.MAX_VALUE))
+                .addGap(0, 19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -538,7 +568,11 @@ public class Clientes extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Clientes().setVisible(true);
+                try {
+                    new Clientes().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Clientes.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -552,6 +586,7 @@ public class Clientes extends javax.swing.JFrame {
     private javax.swing.JTextField Tel_field;
     private javax.swing.JLabel exit_label;
     private javax.swing.JPanel exit_panel;
+    private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
