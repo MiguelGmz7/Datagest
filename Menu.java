@@ -217,14 +217,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
+            .addGap(0, 490, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 730, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 490, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
