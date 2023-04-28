@@ -252,6 +252,7 @@ public class Cclientes {
         
         String sql = "";
         
+        modelo.addColumn("ID");
         modelo.addColumn("Nombre");
         modelo.addColumn("Email");
         modelo.addColumn("Telefono");
@@ -260,7 +261,7 @@ public class Cclientes {
         
         sql = "select * from clientes;";
         
-        String[] datos = new String[5];
+        String[] datos = new String[6];
         
         java.sql.Statement st;
         
@@ -269,11 +270,12 @@ public class Cclientes {
             java.sql.ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()) {
-                datos[0] = rs.getString(2);
-                datos[1] = rs.getString(3);
-                datos[2] = rs.getString(4);
-                datos[3] = rs.getString(5);
-                datos[4] = rs.getString(6);
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
                 
                 modelo.addRow(datos);
             }
