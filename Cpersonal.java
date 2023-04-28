@@ -97,6 +97,7 @@ public class Cpersonal {
         
         String sql = "";
         
+        modelo.addColumn("ID");
         modelo.addColumn("Nombre_1");
         modelo.addColumn("Nombre_2");
         modelo.addColumn("Apellidos");
@@ -107,7 +108,7 @@ public class Cpersonal {
         
         sql = "select * from personal;";
         
-        String[] datos = new String[7];
+        String[] datos = new String[8];
         
         java.sql.Statement st;
         
@@ -116,13 +117,15 @@ public class Cpersonal {
             java.sql.ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()) {
-                datos[0] = rs.getString(2);
-                datos[1] = rs.getString(3);
-                datos[2] = rs.getString(4);
-                datos[3] = rs.getString(5);
-                datos[4] = rs.getString(6);
-                datos[5] = rs.getString(8);
-                datos[6] = rs.getString(9);
+                
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(8);
+                datos[7] = rs.getString(9);
                 
                 modelo.addRow(datos);
             }
