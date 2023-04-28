@@ -94,9 +94,6 @@ public class Personal_mod extends javax.swing.JFrame {
         Email_field = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         label_c5 = new javax.swing.JLabel();
-        label_c6 = new javax.swing.JLabel();
-        Pass_field = new javax.swing.JTextField();
-        jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         Tel_field = new javax.swing.JTextField();
         label_c7 = new javax.swing.JLabel();
@@ -383,29 +380,6 @@ public class Personal_mod extends javax.swing.JFrame {
         label_c5.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         label_c5.setText("Email*");
 
-        label_c6.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        label_c6.setText("Password*");
-
-        Pass_field.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Pass_field.setBorder(null);
-        Pass_field.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                Pass_fieldAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        Pass_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pass_fieldActionPerformed(evt);
-            }
-        });
-
-        jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-
         jSeparator7.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -451,9 +425,6 @@ public class Personal_mod extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Act_rb, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(label_c5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Pass_field, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(label_c6, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Tel_field, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(label_c7, javax.swing.GroupLayout.Alignment.LEADING)
@@ -515,12 +486,6 @@ public class Personal_mod extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(label_c6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
                 .addComponent(label_c7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Tel_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -574,17 +539,16 @@ public class Personal_mod extends javax.swing.JFrame {
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         
         Menu menu = new Menu();
-        if("".equals(Nombre1_field.getText())|| "".equals(Ape_field.getText()) || "".equals(Email_field.getText()) || "".equals(Pass_field.getText()) || "".equals(Puesto_field.getText())){
+        if("".equals(Nombre1_field.getText())|| "".equals(Ape_field.getText()) || "".equals(Email_field.getText()) || "".equals(Puesto_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
         else {
             try {
-                new Cpersonal().modificarPersonal(nombre_1,Nombre1_field, Nombre2_field, Ape_field, Puesto_field, Email_field, Pass_field, Tel_field, Act_rb);
+                new Cpersonal().modificarPersonal(nombre_1,Nombre1_field, Nombre2_field, Ape_field, Puesto_field, Email_field, Tel_field, Act_rb);
             } catch (NoSuchAlgorithmException ex) {
                 Logger.getLogger(Personal_mod.class.getName()).log(Level.SEVERE, null, ex);
             }
             setVisible(false);
-            Pass_field.setText("");
             menu.resetTable();
         }
     }//GEN-LAST:event_login_btm2MouseClicked
@@ -611,7 +575,6 @@ public class Personal_mod extends javax.swing.JFrame {
         Ape_field.setText(null);
         Puesto_field.setText(null);
         Email_field.setText(null);
-        Pass_field.setText(null);
         Tel_field.setText(null);
         Act_rb.setSelected(false);
     }//GEN-LAST:event_reset_btmMouseClicked
@@ -678,14 +641,6 @@ public class Personal_mod extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Email_fieldActionPerformed
 
-    private void Pass_fieldAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_Pass_fieldAncestorAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Pass_fieldAncestorAdded
-
-    private void Pass_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pass_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Pass_fieldActionPerformed
-
     private void Tel_fieldAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_Tel_fieldAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_Tel_fieldAncestorAdded
@@ -739,7 +694,6 @@ public class Personal_mod extends javax.swing.JFrame {
     private javax.swing.JPanel Fondo;
     private javax.swing.JTextField Nombre1_field;
     private javax.swing.JTextField Nombre2_field;
-    private javax.swing.JTextField Pass_field;
     private javax.swing.JTextField Puesto_field;
     private javax.swing.JTextField Tel_field;
     private javax.swing.JLabel exit_label;
@@ -752,7 +706,6 @@ public class Personal_mod extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel label_c;
     private javax.swing.JLabel label_c1;
@@ -760,7 +713,6 @@ public class Personal_mod extends javax.swing.JFrame {
     private javax.swing.JLabel label_c3;
     private javax.swing.JLabel label_c4;
     private javax.swing.JLabel label_c5;
-    private javax.swing.JLabel label_c6;
     private javax.swing.JLabel label_c7;
     private javax.swing.JLabel login_btm2;
     private javax.swing.JPanel panel_login;

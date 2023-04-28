@@ -249,7 +249,7 @@ public class Cpersonal {
         return Activo;
     }
     
-     public void modificarPersonal(String prenombre, JTextField nombre_1, JTextField nombre_2, JTextField apellidos, JTextField puesto, JTextField email, JTextField password, JTextField telefono, JRadioButton activo) throws NoSuchAlgorithmException {
+     public void modificarPersonal(String prenombre, JTextField nombre_1, JTextField nombre_2, JTextField apellidos, JTextField puesto, JTextField email, JTextField telefono, JRadioButton activo) throws NoSuchAlgorithmException {
         try{
         String sql_id = "select personal_id from personal where nombre_1 = '"+prenombre+"';";
         Cconexion conexion = new Cconexion();
@@ -270,15 +270,12 @@ public class Cpersonal {
         
             setEmail(email.getText());
         
-            String hash = new Encript().Sha1(getEmail(), password.getText());
-        
-            setPassword(hash);
         
             setTelefono(telefono.getText());
         
             setActivo(activo.isSelected());
             
-            String update = "update personal set nombre_1 = ?, nombre_2 = ?, apellidos = ?, puesto = ?, email = ?, password = ?, telefono = ?, activo = ? where personal_id = "+id+";";
+            String update = "update personal set nombre_1 = ?, nombre_2 = ?, apellidos = ?, puesto = ?, email = ?, telefono = ?, activo = ? where personal_id = "+id+";";
             
         java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
             cs.setString(1, getNombre_1());
@@ -286,9 +283,8 @@ public class Cpersonal {
             cs.setString(3, getApellidos());
             cs.setString(4, getPuesto());
             cs.setString(5, getEmail());
-            cs.setString(6, getPassword());
-            cs.setString(7, getTelefono());
-            cs.setBoolean(8, isActivo());
+            cs.setString(6, getTelefono());
+            cs.setBoolean(7, isActivo());
             cs.execute();
         JOptionPane.showMessageDialog(null,"Se Modifico correctamente la información","MODIFICAR",JOptionPane.INFORMATION_MESSAGE);
         } else {
