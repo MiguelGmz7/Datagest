@@ -458,6 +458,7 @@ public class Clientes extends javax.swing.JFrame {
             clientes.InsertarClientes(Nombre_field, Email_field, Tel_field, Dir_field, Act_rb);
             menu.resetTable();
         }
+        setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
