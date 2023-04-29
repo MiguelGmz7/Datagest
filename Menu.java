@@ -10,8 +10,10 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 
@@ -49,8 +51,23 @@ public class Menu extends javax.swing.JFrame {
         
     }
     
-    
-    
+    public String seleccionarParam(JTable Para_clientes,int index) {
+        String Activo = null;
+        try{
+        int fila = Para_clientes.getSelectedRow();
+        
+        if(fila >= 0) {
+                Activo = Para_clientes.getValueAt(fila, index).toString(); 
+        } else {
+            JOptionPane.showMessageDialog(null, "Fila No Seleccionada");
+        }
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error:\n "+e.toString());
+        }
+        return Activo;
+    }     
+            
     public void resetTable() {
         Cclientes clientes = new Cclientes();
         clientes.MostrarClientes(Tb_clientes);
@@ -217,14 +234,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGap(0, 490, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 40, 470, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 490, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -1923,13 +1940,14 @@ public class Menu extends javax.swing.JFrame {
         Cclientes clientes = new Cclientes();
         clientes.SeleccionarClientes(Tb_clientes, Registro_field, Campo_combo);
         
-        String nombrem = clientes.seleccionarNombre(Tb_clientes);
-        String emailm = clientes.seleccionarEmail(Tb_clientes);
-        String telefonom = clientes.seleccionarTelefono(Tb_clientes);
-        String dirm = clientes.seleccionarDireccion(Tb_clientes);
-        String activom = clientes.seleccionarActivo(Tb_clientes);
+        String idm = seleccionarParam(Tb_clientes, 0);
+        String nombrem = seleccionarParam(Tb_clientes, 1);
+        String emailm = seleccionarParam(Tb_clientes, 2);
+        String telefonom = seleccionarParam(Tb_clientes,3);
+        String dirm = seleccionarParam(Tb_clientes,4);
+        String activom = seleccionarParam(Tb_clientes,5);
         
-        mod.setClienteMod(nombrem, emailm, telefonom, dirm, activom);
+        mod.setClienteMod(idm, nombrem, emailm, telefonom, dirm, activom);
         login_btm5.setEnabled(true);
         
     }//GEN-LAST:event_Tb_clientesMouseClicked
