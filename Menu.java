@@ -217,14 +217,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, 480, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 40, 470, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -382,7 +382,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "cliente_id", "nombre", "email", "telefono", "direccion", "activo" }));
+        Campo_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "cliente_id", "nombre", "email", "telefono", "direccion", "activo" }));
         Campo_combo.setToolTipText("");
         Campo_combo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -643,7 +643,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo1.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "nombre", "cantidad", "activo" }));
+        Campo_combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "material_id", "nombre", "cantidad", "activo" }));
         Campo_combo1.setToolTipText("");
         Campo_combo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
