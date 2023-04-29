@@ -919,7 +919,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo2.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "nombre_1", "nombre_2", "apellidos", "puesto", "email", "telefono", "activo" }));
+        Campo_combo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "personal_id", "nombre_1", "nombre_2", "apellidos", "puesto", "email", "telefono", "activo" }));
         Campo_combo2.setToolTipText("");
         Campo_combo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
