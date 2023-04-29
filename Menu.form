@@ -60,14 +60,14 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="790" y="40" width="470" height="40"/>
+              <AbsoluteConstraints x="770" y="40" width="490" height="40"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="470" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="490" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
