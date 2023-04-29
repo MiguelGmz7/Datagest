@@ -151,22 +151,24 @@ public class Cprovedores {
         DefaultTableModel modelo = new DefaultTableModel();
         String sql = "select * from provedores where "+cam+" = '"+bsq+"';";
         
+        modelo.addColumn("ID");
         modelo.addColumn("Nombre");
         modelo.addColumn("Email");
         modelo.addColumn("Telefono");
         modelo.addColumn("Activo");
         
-        String[] datos = new String[4];
+        String[] datos = new String[5];
         
         try{
             java.sql.Statement st = conexion.EstablecerConexion().createStatement();
             java.sql.ResultSet rs = st.executeQuery(sql);
             
             while (rs.next()) {
-                datos[0] = rs.getString(2);
-                datos[1] = rs.getString(3);
-                datos[2] = rs.getString(4);
-                datos[3] = rs.getString(5);
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
                 
                 modelo.addRow(datos);
             }

@@ -1214,7 +1214,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo3.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "nombre", "email", "telefono", "activo" }));
+        Campo_combo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "provedor_id", "nombre", "email", "telefono", "activo" }));
         Campo_combo3.setToolTipText("");
         Campo_combo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
