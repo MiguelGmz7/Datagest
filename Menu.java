@@ -2195,12 +2195,13 @@ public class Menu extends javax.swing.JFrame {
     private void Tb_clientes3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes3MouseClicked
         // TODO add your handling code here:
         new Cprovedores().SeleccionarProvedor(Tb_clientes3, Registro_field3, Campo_combo3);
-        String mnombre = new Cpersonal().seleccionarParam(Tb_clientes3, 0);
-        String memail = new Cpersonal().seleccionarParam(Tb_clientes3, 1);
-        String mtel = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
-        String mact = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
+        String id = seleccionarParam(Tb_clientes3, 0);
+        String mnombre = new Cpersonal().seleccionarParam(Tb_clientes3, 1);
+        String memail = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
+        String mtel = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
+        String mact = new Cpersonal().seleccionarParam(Tb_clientes3, 4);
         
-        mod3.setProvedorMod(mnombre, memail, mtel, mact);
+        mod3.setProvedorMod(id, mnombre, memail, mtel, mact);
       
         login_btm17.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes3MouseClicked

@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Provedores_mod extends javax.swing.JFrame {
     private int Xmouse, Ymouse;
-    private String Nombre, Email, Tel;
+    private String id, Nombre, Email, Tel;
     private boolean act;
     /**
      * Creates new form Clientes
@@ -26,7 +26,9 @@ public class Provedores_mod extends javax.swing.JFrame {
         
     }
     
-    public void setProvedorMod(String mnombre, String memail, String mtelefono, String mactivo) {
+    public void setProvedorMod(String id, String mnombre, String memail, String mtelefono, String mactivo) {
+        this.id = id;
+        ID.setText(this.id);
         this.Nombre = mnombre;
         Nombre_field.setText(Nombre);
         this.Email = memail;
@@ -58,6 +60,7 @@ public class Provedores_mod extends javax.swing.JFrame {
         selector = new javax.swing.JPanel();
         exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
+        ID = new javax.swing.JLabel();
         label_c = new javax.swing.JLabel();
         Nombre_field = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -84,7 +87,7 @@ public class Provedores_mod extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Modificar");
+        jLabel1.setText("Modificar Registro");
 
         selector.setOpaque(false);
         selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -150,15 +153,23 @@ public class Provedores_mod extends javax.swing.JFrame {
             .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        ID.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        ID.setForeground(new java.awt.Color(255, 255, 255));
+        ID.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +177,9 @@ public class Provedores_mod extends javax.swing.JFrame {
                 .addComponent(selector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(15, 15, 15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         label_c.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -568,6 +581,7 @@ public class Provedores_mod extends javax.swing.JFrame {
     private javax.swing.JRadioButton Act_rb;
     private javax.swing.JTextField Email_field;
     private javax.swing.JPanel Fondo;
+    private javax.swing.JLabel ID;
     private javax.swing.JTextField Nombre_field;
     private javax.swing.JTextField Tel_field;
     private javax.swing.JLabel exit_label;
