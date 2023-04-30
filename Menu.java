@@ -2084,15 +2084,16 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Cpersonal().SeleccionarPersonal(Tb_clientes2, Registro_field2, Campo_combo2);
         
-        String mnombre_1 = new Cpersonal().seleccionarParam(Tb_clientes2, 0);
-        String mnombre_2 = new Cpersonal().seleccionarParam(Tb_clientes2, 1);
-        String mapellido = new Cpersonal().seleccionarParam(Tb_clientes2, 2);
-        String mpuesto = new Cpersonal().seleccionarParam(Tb_clientes2, 3);
-        String memail = new Cpersonal().seleccionarParam(Tb_clientes2, 4);
-        String mtel = new Cpersonal().seleccionarParam(Tb_clientes2, 5);
-        String mact = new Cpersonal().seleccionarParam(Tb_clientes2, 6);
+        String id = new Cpersonal().seleccionarParam(Tb_clientes2, 0);
+        String mnombre_1 = new Cpersonal().seleccionarParam(Tb_clientes2, 1);
+        String mnombre_2 = new Cpersonal().seleccionarParam(Tb_clientes2, 2);
+        String mapellido = new Cpersonal().seleccionarParam(Tb_clientes2, 3);
+        String mpuesto = new Cpersonal().seleccionarParam(Tb_clientes2, 4);
+        String memail = new Cpersonal().seleccionarParam(Tb_clientes2, 5);
+        String mtel = new Cpersonal().seleccionarParam(Tb_clientes2, 6);
+        String mact = new Cpersonal().seleccionarParam(Tb_clientes2, 7);
         
-        mod2.setPersonalMod(mnombre_1, mnombre_2, mapellido, mpuesto, memail, mtel, mact);
+        mod2.setPersonalMod(id,mnombre_1, mnombre_2, mapellido, mpuesto, memail, mtel, mact);
         login_btm13.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes2MouseClicked
 

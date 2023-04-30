@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class Personal_mod extends javax.swing.JFrame {
     int Xmouse, Ymouse;
-    private String nombre_1, nombre_2, apellidos, puesto, email, password, telefono;
+    private String id, nombre_1, nombre_2, apellidos, puesto, email, password, telefono;
     private boolean activo;
     /**
      * Creates new form Clientes
@@ -27,7 +27,10 @@ public class Personal_mod extends javax.swing.JFrame {
     }
     
     
-    public void setPersonalMod(String nombre_1, String nombre_2, String apellidos, String puesto, String email, String telefono, String activo) {
+    public void setPersonalMod(String id, String nombre_1, String nombre_2, String apellidos, String puesto, String email, String telefono, String activo) {
+        this.id = id;
+        ID.setText("Modificar Registro "+this.id);
+        
         this.nombre_1 = nombre_1;
         Nombre1_field.setText(this.nombre_1);
        
@@ -69,7 +72,7 @@ public class Personal_mod extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         Fondo = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        ID = new javax.swing.JLabel();
         selector = new javax.swing.JPanel();
         exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
@@ -108,9 +111,9 @@ public class Personal_mod extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
-        jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Modificar");
+        ID.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
+        ID.setForeground(new java.awt.Color(255, 255, 255));
+        ID.setText("Modificar Registro ");
 
         selector.setOpaque(false);
         selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -169,7 +172,7 @@ public class Personal_mod extends javax.swing.JFrame {
             selectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(selectorLayout.createSequentialGroup()
                 .addComponent(exit_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 629, Short.MAX_VALUE))
         );
         selectorLayout.setVerticalGroup(
             selectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,18 +183,18 @@ public class Personal_mod extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
-            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(selector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(ID)
                 .addGap(15, 15, 15))
         );
 
@@ -692,13 +695,13 @@ public class Personal_mod extends javax.swing.JFrame {
     private javax.swing.JTextField Ape_field;
     private javax.swing.JTextField Email_field;
     private javax.swing.JPanel Fondo;
+    private javax.swing.JLabel ID;
     private javax.swing.JTextField Nombre1_field;
     private javax.swing.JTextField Nombre2_field;
     private javax.swing.JTextField Puesto_field;
     private javax.swing.JTextField Tel_field;
     private javax.swing.JLabel exit_label;
     private javax.swing.JPanel exit_panel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
