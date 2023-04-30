@@ -161,7 +161,7 @@ public class Clientes_mod extends javax.swing.JFrame {
             .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        ID.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        ID.setFont(new java.awt.Font("Roboto", 1, 27)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
         ID.setText("jLabel2");
 

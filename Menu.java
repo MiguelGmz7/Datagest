@@ -1976,11 +1976,12 @@ public class Menu extends javax.swing.JFrame {
         Cinzumos insumos = new Cinzumos();
         insumos.SeleccionarInsumos(Tb_clientes1, Registro_field1, Campo_combo1);
         
-        String nombre = insumos.seleccionarNombre(Tb_clientes1);
-        String cantidad = insumos.seleccionarCantidad(Tb_clientes1);
-        String activoi = insumos.seleccionarActivo(Tb_clientes1);
+        String id = seleccionarParam(Tb_clientes1, 0);
+        String nombre = seleccionarParam(Tb_clientes1, 1);
+        String cantidad = seleccionarParam(Tb_clientes1, 2);
+        String activoi = seleccionarParam(Tb_clientes1, 3);
         
-        mod1.setInsumoMod(nombre, cantidad, activoi);
+        mod1.setInsumoMod(id, nombre, cantidad, activoi);
         login_btm9.setEnabled(true);
         
     }//GEN-LAST:event_Tb_clientes1MouseClicked
