@@ -234,14 +234,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 490, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 730, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -1600,6 +1600,12 @@ public class Menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Usario_fieldMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Usario_fieldMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Usario_fieldMouseExited(evt);
+            }
         });
 
         javax.swing.GroupLayout Usuario_panelLayout = new javax.swing.GroupLayout(Usuario_panel);
@@ -2329,6 +2335,16 @@ public class Menu extends javax.swing.JFrame {
     private void Usario_fieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Usario_fieldFocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_Usario_fieldFocusGained
+
+    private void Usario_fieldMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usario_fieldMouseEntered
+        // TODO add your handling code here:
+        Usuario_panel.setBackground(Color.red);
+    }//GEN-LAST:event_Usario_fieldMouseEntered
+
+    private void Usario_fieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usario_fieldMouseExited
+        // TODO add your handling code here:
+        Usuario_panel.setBackground(new Color(246,150,143));
+    }//GEN-LAST:event_Usario_fieldMouseExited
 
     /**
      * @param args the command line arguments
