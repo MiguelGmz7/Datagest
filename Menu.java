@@ -46,6 +46,7 @@ public class Menu extends javax.swing.JFrame {
         insumos.MostrarInzumos(Tb_clientes1);
         new Cpersonal().mostrarPersonal(Tb_clientes2);
         new Cprovedores().mostrarProvedor(Tb_clientes3);
+        new Cmaquinas().mostrarMaquinas(Tb_clientes5);
         
         Display_tab.setSelectedIndex(4);
         
@@ -201,6 +202,22 @@ public class Menu extends javax.swing.JFrame {
         User_puesto = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        Tb_clientes5 = new javax.swing.JTable();
+        jLabel14 = new javax.swing.JLabel();
+        panel_login20 = new javax.swing.JPanel();
+        login_btm22 = new javax.swing.JLabel();
+        panel_login21 = new javax.swing.JPanel();
+        login_btm23 = new javax.swing.JLabel();
+        panel_login22 = new javax.swing.JPanel();
+        login_btm24 = new javax.swing.JLabel();
+        Campo_combo5 = new javax.swing.JComboBox<>();
+        Registro_field5 = new javax.swing.JTextField();
+        panel_login23 = new javax.swing.JPanel();
+        login_btm25 = new javax.swing.JLabel();
         Side_panel = new javax.swing.JPanel();
         Nombre1_field = new javax.swing.JLabel();
         Nombre2_field = new javax.swing.JLabel();
@@ -234,14 +251,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 730, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 40, 430, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -474,7 +491,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(Campo_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Registro_field, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)))
+                                .addComponent(Registro_field, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -501,7 +518,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(Registro_field))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         Display_tab.addTab("tab2", jPanel2);
@@ -735,7 +752,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(Campo_combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Registro_field1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)))
+                                .addComponent(Registro_field1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panel_login7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -762,20 +779,20 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(Registro_field1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGap(0, 609, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1011,7 +1028,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(Campo_combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Registro_field2, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)))
+                                .addComponent(Registro_field2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panel_login11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1047,7 +1064,7 @@ public class Menu extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 233, Short.MAX_VALUE))
+                .addGap(0, 213, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1312,7 +1329,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(panel_login15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_login13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 54, Short.MAX_VALUE))))
+                        .addGap(0, 72, Short.MAX_VALUE))))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1340,7 +1357,7 @@ public class Menu extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 312, Short.MAX_VALUE))
+                .addGap(0, 294, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1456,7 +1473,7 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(User_puesto, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
                             .addComponent(jSeparator7))
-                        .addGap(0, 688, Short.MAX_VALUE))
+                        .addGap(0, 685, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(User_ap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1535,12 +1552,305 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(39, 39, 39)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(515, Short.MAX_VALUE)))
+                    .addContainerGap(534, Short.MAX_VALUE)))
         );
 
         Display_tab.addTab("tab1", jPanel1);
 
-        Fondo.add(Display_tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 730, 610));
+        jPanel16.setBackground(new java.awt.Color(245, 101, 90));
+
+        Tb_clientes5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        Tb_clientes5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Tb_clientes5MouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(Tb_clientes5);
+
+        jLabel14.setFont(new java.awt.Font("Roboto", 0, 48)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Maquinas");
+
+        panel_login20.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login20MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login20MouseExited(evt);
+            }
+        });
+
+        login_btm22.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm22.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        login_btm22.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm22.setText("INSERTAR");
+        login_btm22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm22MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm22MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm22MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login20Layout = new javax.swing.GroupLayout(panel_login20);
+        panel_login20.setLayout(panel_login20Layout);
+        panel_login20Layout.setHorizontalGroup(
+            panel_login20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login20Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm22, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panel_login20Layout.setVerticalGroup(
+            panel_login20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login20Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm22, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        panel_login21.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login21MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login21MouseExited(evt);
+            }
+        });
+
+        login_btm23.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm23.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        login_btm23.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm23.setText("RECARGAR");
+        login_btm23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm23MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm23MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm23MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login21Layout = new javax.swing.GroupLayout(panel_login21);
+        panel_login21.setLayout(panel_login21Layout);
+        panel_login21Layout.setHorizontalGroup(
+            panel_login21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm23, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+        );
+        panel_login21Layout.setVerticalGroup(
+            panel_login21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login21Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm23, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        panel_login22.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login22MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login22MouseExited(evt);
+            }
+        });
+
+        login_btm24.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm24.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        login_btm24.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm24.setText("BUSCAR");
+        login_btm24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm24MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm24MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm24MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login22Layout = new javax.swing.GroupLayout(panel_login22);
+        panel_login22.setLayout(panel_login22Layout);
+        panel_login22Layout.setHorizontalGroup(
+            panel_login22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login22Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm24, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panel_login22Layout.setVerticalGroup(
+            panel_login22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login22Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm24, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Campo_combo5.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "provedor_id", "nombre", "email", "telefono", "activo" }));
+        Campo_combo5.setToolTipText("");
+        Campo_combo5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_combo5ActionPerformed(evt);
+            }
+        });
+
+        Registro_field5.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        Registro_field5.setBorder(null);
+
+        panel_login23.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login23MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login23MouseExited(evt);
+            }
+        });
+
+        login_btm25.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm25.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        login_btm25.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm25.setText("MODIFICAR");
+        login_btm25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm25.setEnabled(false);
+        login_btm25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm25MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm25MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm25MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login23Layout = new javax.swing.GroupLayout(panel_login23);
+        panel_login23.setLayout(panel_login23Layout);
+        panel_login23Layout.setHorizontalGroup(
+            panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login23Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panel_login23Layout.setVerticalGroup(
+            panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login23Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jScrollPane6)
+                        .addContainerGap())
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(Campo_combo5, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Registro_field5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panel_login22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(128, 128, 128))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
+                        .addComponent(panel_login20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel_login23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 135, Short.MAX_VALUE))))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14)
+                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(panel_login23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panel_login20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panel_login22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Campo_combo5)
+                    .addComponent(Registro_field5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 231, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 985, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel14Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 641, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel14Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Display_tab.addTab("tab6", jPanel14);
+
+        Fondo.add(Display_tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 750, 640));
 
         Side_panel.setBackground(new java.awt.Color(245, 101, 90));
 
@@ -1838,7 +2148,7 @@ public class Menu extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 727, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1868,444 +2178,6 @@ public class Menu extends javax.swing.JFrame {
     private void exit_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseClicked
         System.exit(0);
     }//GEN-LAST:event_exit_labelMouseClicked
-
-    private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-        try {
-            new Clientes().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_login_btm2MouseClicked
-
-    private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
-        panel_login.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_login_btm2MouseEntered
-
-    private void login_btm2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseExited
-        panel_login.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_login_btm2MouseExited
-
-    private void panel_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_loginMouseEntered
-        panel_login.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_panel_loginMouseEntered
-
-    private void panel_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_loginMouseExited
-        panel_login.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_panel_loginMouseExited
-
-    private void login_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseClicked
-        Cclientes clientes = new Cclientes();
-        clientes.MostrarClientes(Tb_clientes);
-    }//GEN-LAST:event_login_btm3MouseClicked
-
-    private void login_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseEntered
-        panel_login1.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_login_btm3MouseEntered
-
-    private void login_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseExited
-        panel_login1.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_login_btm3MouseExited
-
-    private void panel_login1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login1MouseEntered
-
-    private void panel_login1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login1MouseExited
-
-    private void login_btm4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseClicked
-        // TODO add your handling code here:
-        Cclientes clientes = new Cclientes();
-        clientes.BuscarClientes(Tb_clientes, Campo_combo, Registro_field);
-        Campo_combo.setSelectedIndex(0);
-        Registro_field.setText("");
-    }//GEN-LAST:event_login_btm4MouseClicked
-
-    private void login_btm4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseEntered
-        panel_login2.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_login_btm4MouseEntered
-
-    private void login_btm4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseExited
-        panel_login2.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_login_btm4MouseExited
-
-    private void panel_login2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login2MouseEntered
-
-    private void panel_login2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login2MouseExited
-
-    private void Campo_comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_comboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Campo_comboActionPerformed
-
-    private void Tb_clientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientesMouseClicked
-        Cclientes clientes = new Cclientes();
-        clientes.SeleccionarClientes(Tb_clientes, Registro_field, Campo_combo);
-        
-        String idm = seleccionarParam(Tb_clientes, 0);
-        String nombrem = seleccionarParam(Tb_clientes, 1);
-        String emailm = seleccionarParam(Tb_clientes, 2);
-        String telefonom = seleccionarParam(Tb_clientes,3);
-        String dirm = seleccionarParam(Tb_clientes,4);
-        String activom = seleccionarParam(Tb_clientes,5);
-        
-        mod.setClienteMod(idm, nombrem, emailm, telefonom, dirm, activom);
-        login_btm5.setEnabled(true);
-        
-    }//GEN-LAST:event_Tb_clientesMouseClicked
-
-    private void login_btm5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseClicked
-        mod.setVisible(true);
-    }//GEN-LAST:event_login_btm5MouseClicked
-
-    private void login_btm5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm5MouseEntered
-
-    private void login_btm5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm5MouseExited
-
-    private void panel_login3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login3MouseEntered
-
-    private void panel_login3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login3MouseExited
-
-    private void Tb_clientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes1MouseClicked
-        Cinzumos insumos = new Cinzumos();
-        insumos.SeleccionarInsumos(Tb_clientes1, Registro_field1, Campo_combo1);
-        
-        String id = seleccionarParam(Tb_clientes1, 0);
-        String nombre = seleccionarParam(Tb_clientes1, 1);
-        String cantidad = seleccionarParam(Tb_clientes1, 2);
-        String activoi = seleccionarParam(Tb_clientes1, 3);
-        
-        mod1.setInsumoMod(id, nombre, cantidad, activoi);
-        login_btm9.setEnabled(true);
-        
-    }//GEN-LAST:event_Tb_clientes1MouseClicked
-
-    private void login_btm6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseClicked
-        try {
-            new Insumos_insert().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_login_btm6MouseClicked
-
-    private void login_btm6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm6MouseEntered
-
-    private void login_btm6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm6MouseExited
-
-    private void panel_login4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login4MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login4MouseEntered
-
-    private void panel_login4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login4MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login4MouseExited
-
-    private void login_btm7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseClicked
-       Cinzumos insumos = new Cinzumos();
-       insumos.MostrarInzumos(Tb_clientes1);
-    }//GEN-LAST:event_login_btm7MouseClicked
-
-    private void login_btm7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm7MouseEntered
-
-    private void login_btm7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm7MouseExited
-
-    private void panel_login5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login5MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login5MouseEntered
-
-    private void panel_login5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login5MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login5MouseExited
-
-    private void login_btm8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseClicked
-        // TODO add your handling code here:
-        Cinzumos insumos = new Cinzumos();
-        insumos.BuscarInsumo(Tb_clientes1, Campo_combo1, Registro_field1);
-        Campo_combo1.setSelectedIndex(0);
-        Registro_field1.setText("");
-    }//GEN-LAST:event_login_btm8MouseClicked
-
-    private void login_btm8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm8MouseEntered
-
-    private void login_btm8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm8MouseExited
-
-    private void panel_login6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login6MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login6MouseEntered
-
-    private void panel_login6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login6MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login6MouseExited
-
-    private void Campo_combo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Campo_combo1ActionPerformed
-
-    private void login_btm9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseClicked
-        // TODO add your handling code here:
-        mod1.setVisible(true);
-    }//GEN-LAST:event_login_btm9MouseClicked
-
-    private void login_btm9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm9MouseEntered
-
-    private void login_btm9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm9MouseExited
-
-    private void panel_login7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login7MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login7MouseEntered
-
-    private void panel_login7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login7MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login7MouseExited
-
-    private void Tb_clientes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes2MouseClicked
-        // TODO add your handling code here:
-        new Cpersonal().SeleccionarPersonal(Tb_clientes2, Registro_field2, Campo_combo2);
-        
-        String id = new Cpersonal().seleccionarParam(Tb_clientes2, 0);
-        String mnombre_1 = new Cpersonal().seleccionarParam(Tb_clientes2, 1);
-        String mnombre_2 = new Cpersonal().seleccionarParam(Tb_clientes2, 2);
-        String mapellido = new Cpersonal().seleccionarParam(Tb_clientes2, 3);
-        String mpuesto = new Cpersonal().seleccionarParam(Tb_clientes2, 4);
-        String memail = new Cpersonal().seleccionarParam(Tb_clientes2, 5);
-        String mtel = new Cpersonal().seleccionarParam(Tb_clientes2, 6);
-        String mact = new Cpersonal().seleccionarParam(Tb_clientes2, 7);
-        
-        mod2.setPersonalMod(id,mnombre_1, mnombre_2, mapellido, mpuesto, memail, mtel, mact);
-        login_btm13.setEnabled(true);
-    }//GEN-LAST:event_Tb_clientes2MouseClicked
-
-    private void login_btm10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseClicked
-        try {
-            // TODO add your handling code here:
-            new Personal_insert().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_login_btm10MouseClicked
-
-    private void login_btm10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm10MouseEntered
-
-    private void login_btm10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm10MouseExited
-
-    private void panel_login8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login8MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login8MouseEntered
-
-    private void panel_login8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login8MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login8MouseExited
-
-    private void login_btm11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseClicked
-        // TODO add your handling code here:
-        new Cpersonal().mostrarPersonal(Tb_clientes2);
-    }//GEN-LAST:event_login_btm11MouseClicked
-
-    private void login_btm11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm11MouseEntered
-
-    private void login_btm11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm11MouseExited
-
-    private void panel_login9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login9MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login9MouseEntered
-
-    private void panel_login9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login9MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login9MouseExited
-
-    private void login_btm12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseClicked
-        // TODO add your handling code here:
-        new Cpersonal().BuscarPersonal(Tb_clientes2, Campo_combo2, Registro_field2);
-        Campo_combo2.setSelectedIndex(0);
-        Registro_field2.setText("");
-    }//GEN-LAST:event_login_btm12MouseClicked
-
-    private void login_btm12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm12MouseEntered
-
-    private void login_btm12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm12MouseExited
-
-    private void panel_login10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login10MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login10MouseEntered
-
-    private void panel_login10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login10MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login10MouseExited
-
-    private void Campo_combo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Campo_combo2ActionPerformed
-
-    private void login_btm13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseClicked
-        // TODO add your handling code here:
-        mod2.setVisible(true);
-        
-    }//GEN-LAST:event_login_btm13MouseClicked
-
-    private void login_btm13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm13MouseEntered
-
-    private void login_btm13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm13MouseExited
-
-    private void panel_login11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login11MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login11MouseEntered
-
-    private void panel_login11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login11MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login11MouseExited
-
-    private void Tb_clientes3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes3MouseClicked
-        // TODO add your handling code here:
-        new Cprovedores().SeleccionarProvedor(Tb_clientes3, Registro_field3, Campo_combo3);
-        String id = seleccionarParam(Tb_clientes3, 0);
-        String mnombre = new Cpersonal().seleccionarParam(Tb_clientes3, 1);
-        String memail = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
-        String mtel = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
-        String mact = new Cpersonal().seleccionarParam(Tb_clientes3, 4);
-        
-        mod3.setProvedorMod(id, mnombre, memail, mtel, mact);
-      
-        login_btm17.setEnabled(true);
-    }//GEN-LAST:event_Tb_clientes3MouseClicked
-
-    private void login_btm14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseClicked
-        try {
-            // TODO add your handling code here:
-            new Provedores_insert().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }//GEN-LAST:event_login_btm14MouseClicked
-
-    private void login_btm14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm14MouseEntered
-
-    private void login_btm14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm14MouseExited
-
-    private void panel_login12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login12MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login12MouseEntered
-
-    private void panel_login12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login12MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login12MouseExited
-
-    private void login_btm15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseClicked
-        // TODO add your handling code here:
-        new Cprovedores().mostrarProvedor(Tb_clientes3);
-    }//GEN-LAST:event_login_btm15MouseClicked
-
-    private void login_btm15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm15MouseEntered
-
-    private void login_btm15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm15MouseExited
-
-    private void panel_login13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login13MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login13MouseEntered
-
-    private void panel_login13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login13MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login13MouseExited
-
-    private void login_btm16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseClicked
-        // TODO add your handling code here:
-        new Cprovedores().BuscarProvedor(Tb_clientes3, Campo_combo3, Registro_field3);
-        Campo_combo3.setSelectedIndex(0);
-        Registro_field3.setText("");
-    }//GEN-LAST:event_login_btm16MouseClicked
-
-    private void login_btm16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm16MouseEntered
-
-    private void login_btm16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm16MouseExited
-
-    private void panel_login14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login14MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login14MouseEntered
-
-    private void panel_login14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login14MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login14MouseExited
-
-    private void Campo_combo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Campo_combo3ActionPerformed
-
-    private void login_btm17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseClicked
-        // TODO add your handling code here:
-        mod3.setVisible(true);
-    }//GEN-LAST:event_login_btm17MouseClicked
-
-    private void login_btm17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm17MouseEntered
-
-    private void login_btm17MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm17MouseExited
-
-    private void panel_login15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login15MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login15MouseEntered
-
-    private void panel_login15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login15MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login15MouseExited
 
     private void Usario_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usario_fieldMouseClicked
         // TODO add your handling code here:
@@ -2345,6 +2217,528 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Usuario_panel.setBackground(new Color(246,150,143));
     }//GEN-LAST:event_Usario_fieldMouseExited
+
+    private void panel_login15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login15MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login15MouseExited
+
+    private void panel_login15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login15MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login15MouseEntered
+
+    private void login_btm17MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm17MouseExited
+
+    private void login_btm17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm17MouseEntered
+
+    private void login_btm17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseClicked
+        // TODO add your handling code here:
+        mod3.setVisible(true);
+    }//GEN-LAST:event_login_btm17MouseClicked
+
+    private void Campo_combo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_combo3ActionPerformed
+
+    private void panel_login14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login14MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login14MouseExited
+
+    private void panel_login14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login14MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login14MouseEntered
+
+    private void login_btm16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm16MouseExited
+
+    private void login_btm16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm16MouseEntered
+
+    private void login_btm16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseClicked
+        // TODO add your handling code here:
+        new Cprovedores().BuscarProvedor(Tb_clientes3, Campo_combo3, Registro_field3);
+        Campo_combo3.setSelectedIndex(0);
+        Registro_field3.setText("");
+    }//GEN-LAST:event_login_btm16MouseClicked
+
+    private void panel_login13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login13MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login13MouseExited
+
+    private void panel_login13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login13MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login13MouseEntered
+
+    private void login_btm15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm15MouseExited
+
+    private void login_btm15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm15MouseEntered
+
+    private void login_btm15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseClicked
+        // TODO add your handling code here:
+        new Cprovedores().mostrarProvedor(Tb_clientes3);
+    }//GEN-LAST:event_login_btm15MouseClicked
+
+    private void panel_login12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login12MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login12MouseExited
+
+    private void panel_login12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login12MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login12MouseEntered
+
+    private void login_btm14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm14MouseExited
+
+    private void login_btm14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm14MouseEntered
+
+    private void login_btm14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseClicked
+        try {
+            // TODO add your handling code here:
+            new Provedores_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm14MouseClicked
+
+    private void Tb_clientes3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes3MouseClicked
+        // TODO add your handling code here:
+        new Cprovedores().SeleccionarProvedor(Tb_clientes3, Registro_field3, Campo_combo3);
+        String id = seleccionarParam(Tb_clientes3, 0);
+        String mnombre = new Cpersonal().seleccionarParam(Tb_clientes3, 1);
+        String memail = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
+        String mtel = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
+        String mact = new Cpersonal().seleccionarParam(Tb_clientes3, 4);
+
+        mod3.setProvedorMod(id, mnombre, memail, mtel, mact);
+
+        login_btm17.setEnabled(true);
+    }//GEN-LAST:event_Tb_clientes3MouseClicked
+
+    private void panel_login11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login11MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login11MouseExited
+
+    private void panel_login11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login11MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login11MouseEntered
+
+    private void login_btm13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm13MouseExited
+
+    private void login_btm13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm13MouseEntered
+
+    private void login_btm13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm13MouseClicked
+        // TODO add your handling code here:
+        mod2.setVisible(true);
+    }//GEN-LAST:event_login_btm13MouseClicked
+
+    private void Campo_combo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_combo2ActionPerformed
+
+    private void panel_login10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login10MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login10MouseExited
+
+    private void panel_login10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login10MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login10MouseEntered
+
+    private void login_btm12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm12MouseExited
+
+    private void login_btm12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm12MouseEntered
+
+    private void login_btm12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm12MouseClicked
+        // TODO add your handling code here:
+        new Cpersonal().BuscarPersonal(Tb_clientes2, Campo_combo2, Registro_field2);
+        Campo_combo2.setSelectedIndex(0);
+        Registro_field2.setText("");
+    }//GEN-LAST:event_login_btm12MouseClicked
+
+    private void panel_login9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login9MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login9MouseExited
+
+    private void panel_login9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login9MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login9MouseEntered
+
+    private void login_btm11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm11MouseExited
+
+    private void login_btm11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm11MouseEntered
+
+    private void login_btm11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm11MouseClicked
+        // TODO add your handling code here:
+        new Cpersonal().mostrarPersonal(Tb_clientes2);
+    }//GEN-LAST:event_login_btm11MouseClicked
+
+    private void panel_login8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login8MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login8MouseExited
+
+    private void panel_login8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login8MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login8MouseEntered
+
+    private void login_btm10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm10MouseExited
+
+    private void login_btm10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm10MouseEntered
+
+    private void login_btm10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm10MouseClicked
+        try {
+            // TODO add your handling code here:
+            new Personal_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm10MouseClicked
+
+    private void Tb_clientes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes2MouseClicked
+        // TODO add your handling code here:
+        new Cpersonal().SeleccionarPersonal(Tb_clientes2, Registro_field2, Campo_combo2);
+
+        String id = new Cpersonal().seleccionarParam(Tb_clientes2, 0);
+        String mnombre_1 = new Cpersonal().seleccionarParam(Tb_clientes2, 1);
+        String mnombre_2 = new Cpersonal().seleccionarParam(Tb_clientes2, 2);
+        String mapellido = new Cpersonal().seleccionarParam(Tb_clientes2, 3);
+        String mpuesto = new Cpersonal().seleccionarParam(Tb_clientes2, 4);
+        String memail = new Cpersonal().seleccionarParam(Tb_clientes2, 5);
+        String mtel = new Cpersonal().seleccionarParam(Tb_clientes2, 6);
+        String mact = new Cpersonal().seleccionarParam(Tb_clientes2, 7);
+
+        mod2.setPersonalMod(id,mnombre_1, mnombre_2, mapellido, mpuesto, memail, mtel, mact);
+        login_btm13.setEnabled(true);
+    }//GEN-LAST:event_Tb_clientes2MouseClicked
+
+    private void panel_login7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login7MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login7MouseExited
+
+    private void panel_login7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login7MouseEntered
+
+    private void login_btm9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm9MouseExited
+
+    private void login_btm9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm9MouseEntered
+
+    private void login_btm9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm9MouseClicked
+        // TODO add your handling code here:
+        mod1.setVisible(true);
+    }//GEN-LAST:event_login_btm9MouseClicked
+
+    private void Campo_combo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_combo1ActionPerformed
+
+    private void panel_login6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login6MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login6MouseExited
+
+    private void panel_login6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login6MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login6MouseEntered
+
+    private void login_btm8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm8MouseExited
+
+    private void login_btm8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm8MouseEntered
+
+    private void login_btm8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm8MouseClicked
+        // TODO add your handling code here:
+        Cinzumos insumos = new Cinzumos();
+        insumos.BuscarInsumo(Tb_clientes1, Campo_combo1, Registro_field1);
+        Campo_combo1.setSelectedIndex(0);
+        Registro_field1.setText("");
+    }//GEN-LAST:event_login_btm8MouseClicked
+
+    private void panel_login5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login5MouseExited
+
+    private void panel_login5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login5MouseEntered
+
+    private void login_btm7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm7MouseExited
+
+    private void login_btm7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm7MouseEntered
+
+    private void login_btm7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm7MouseClicked
+        Cinzumos insumos = new Cinzumos();
+        insumos.MostrarInzumos(Tb_clientes1);
+    }//GEN-LAST:event_login_btm7MouseClicked
+
+    private void panel_login4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login4MouseExited
+
+    private void panel_login4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login4MouseEntered
+
+    private void login_btm6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm6MouseExited
+
+    private void login_btm6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm6MouseEntered
+
+    private void login_btm6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseClicked
+        try {
+            new Insumos_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm6MouseClicked
+
+    private void Tb_clientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes1MouseClicked
+        Cinzumos insumos = new Cinzumos();
+        insumos.SeleccionarInsumos(Tb_clientes1, Registro_field1, Campo_combo1);
+
+        String id = seleccionarParam(Tb_clientes1, 0);
+        String nombre = seleccionarParam(Tb_clientes1, 1);
+        String cantidad = seleccionarParam(Tb_clientes1, 2);
+        String activoi = seleccionarParam(Tb_clientes1, 3);
+
+        mod1.setInsumoMod(id, nombre, cantidad, activoi);
+        login_btm9.setEnabled(true);
+    }//GEN-LAST:event_Tb_clientes1MouseClicked
+
+    private void panel_login3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login3MouseExited
+
+    private void panel_login3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login3MouseEntered
+
+    private void login_btm5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm5MouseExited
+
+    private void login_btm5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm5MouseEntered
+
+    private void login_btm5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseClicked
+        mod.setVisible(true);
+    }//GEN-LAST:event_login_btm5MouseClicked
+
+    private void Campo_comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_comboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_comboActionPerformed
+
+    private void panel_login2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login2MouseExited
+
+    private void panel_login2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login2MouseEntered
+
+    private void login_btm4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseExited
+        panel_login2.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_login_btm4MouseExited
+
+    private void login_btm4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseEntered
+        panel_login2.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_login_btm4MouseEntered
+
+    private void login_btm4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseClicked
+        // TODO add your handling code here:
+        Cclientes clientes = new Cclientes();
+        clientes.BuscarClientes(Tb_clientes, Campo_combo, Registro_field);
+        Campo_combo.setSelectedIndex(0);
+        Registro_field.setText("");
+    }//GEN-LAST:event_login_btm4MouseClicked
+
+    private void panel_login1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login1MouseExited
+
+    private void panel_login1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login1MouseEntered
+
+    private void login_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseExited
+        panel_login1.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_login_btm3MouseExited
+
+    private void login_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseEntered
+        panel_login1.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_login_btm3MouseEntered
+
+    private void login_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseClicked
+        Cclientes clientes = new Cclientes();
+        clientes.MostrarClientes(Tb_clientes);
+    }//GEN-LAST:event_login_btm3MouseClicked
+
+    private void panel_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_loginMouseExited
+        panel_login.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_panel_loginMouseExited
+
+    private void panel_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_loginMouseEntered
+        panel_login.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_panel_loginMouseEntered
+
+    private void login_btm2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseExited
+        panel_login.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_login_btm2MouseExited
+
+    private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
+        panel_login.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_login_btm2MouseEntered
+
+    private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
+        try {
+            new Clientes().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm2MouseClicked
+
+    private void Tb_clientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientesMouseClicked
+        Cclientes clientes = new Cclientes();
+        clientes.SeleccionarClientes(Tb_clientes, Registro_field, Campo_combo);
+
+        String idm = seleccionarParam(Tb_clientes, 0);
+        String nombrem = seleccionarParam(Tb_clientes, 1);
+        String emailm = seleccionarParam(Tb_clientes, 2);
+        String telefonom = seleccionarParam(Tb_clientes,3);
+        String dirm = seleccionarParam(Tb_clientes,4);
+        String activom = seleccionarParam(Tb_clientes,5);
+
+        mod.setClienteMod(idm, nombrem, emailm, telefonom, dirm, activom);
+        login_btm5.setEnabled(true);
+    }//GEN-LAST:event_Tb_clientesMouseClicked
+
+    private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Tb_clientes5MouseClicked
+
+    private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm22MouseClicked
+
+    private void login_btm22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm22MouseEntered
+
+    private void login_btm22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm22MouseExited
+
+    private void panel_login20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login20MouseEntered
+
+    private void panel_login20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login20MouseExited
+
+    private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm23MouseClicked
+
+    private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm23MouseEntered
+
+    private void login_btm23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm23MouseExited
+
+    private void panel_login21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login21MouseEntered
+
+    private void panel_login21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login21MouseExited
+
+    private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm24MouseClicked
+
+    private void login_btm24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm24MouseEntered
+
+    private void login_btm24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm24MouseExited
+
+    private void panel_login22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login22MouseEntered
+
+    private void panel_login22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login22MouseExited
+
+    private void Campo_combo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_combo5ActionPerformed
+
+    private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm25MouseClicked
+
+    private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm25MouseEntered
+
+    private void login_btm25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm25MouseExited
+
+    private void panel_login23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login23MouseEntered
+
+    private void panel_login23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login23MouseExited
 
     /**
      * @param args the command line arguments
@@ -2387,6 +2781,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Campo_combo1;
     private javax.swing.JComboBox<String> Campo_combo2;
     private javax.swing.JComboBox<String> Campo_combo3;
+    private javax.swing.JComboBox<String> Campo_combo5;
     private javax.swing.JLabel Clientes_field;
     private javax.swing.JPanel Clientes_panel;
     private javax.swing.JTabbedPane Display_tab;
@@ -2404,12 +2799,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField Registro_field1;
     private javax.swing.JTextField Registro_field2;
     private javax.swing.JTextField Registro_field3;
+    private javax.swing.JTextField Registro_field5;
     private javax.swing.JPanel Selector;
     private javax.swing.JPanel Side_panel;
     private javax.swing.JTable Tb_clientes;
     private javax.swing.JTable Tb_clientes1;
     private javax.swing.JTable Tb_clientes2;
     private javax.swing.JTable Tb_clientes3;
+    private javax.swing.JTable Tb_clientes5;
     private javax.swing.JLabel Usario_field;
     private javax.swing.JLabel User_ap;
     private javax.swing.JLabel User_email;
@@ -2423,6 +2820,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2434,6 +2832,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2446,6 +2847,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -2461,6 +2863,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel login_btm16;
     private javax.swing.JLabel login_btm17;
     private javax.swing.JLabel login_btm2;
+    private javax.swing.JLabel login_btm22;
+    private javax.swing.JLabel login_btm23;
+    private javax.swing.JLabel login_btm24;
+    private javax.swing.JLabel login_btm25;
     private javax.swing.JLabel login_btm3;
     private javax.swing.JLabel login_btm4;
     private javax.swing.JLabel login_btm5;
@@ -2477,6 +2883,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel panel_login14;
     private javax.swing.JPanel panel_login15;
     private javax.swing.JPanel panel_login2;
+    private javax.swing.JPanel panel_login20;
+    private javax.swing.JPanel panel_login21;
+    private javax.swing.JPanel panel_login22;
+    private javax.swing.JPanel panel_login23;
     private javax.swing.JPanel panel_login3;
     private javax.swing.JPanel panel_login4;
     private javax.swing.JPanel panel_login5;
