@@ -2658,6 +2658,12 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
         // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new Maquinas_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm22MouseClicked
 
     private void login_btm22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseEntered
@@ -2678,6 +2684,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
         // TODO add your handling code here:
+        new Cmaquinas().mostrarMaquinas(Tb_clientes5);
     }//GEN-LAST:event_login_btm23MouseClicked
 
     private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered

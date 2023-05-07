@@ -5,8 +5,7 @@
 package com.app;
 
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -91,6 +90,29 @@ public class Cmaquinas {
             }
             
             para_maquinas.setModel(modelo);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public void insertartMaquina(JTextField nombre, JTextField proporcion, JRadioButton activo) {
+        
+        setNombre(nombre.getText());
+        setProporcion(proporcion.getText());
+        setActivo(activo.isSelected());
+        
+        Cconexion conexion = new Cconexion();
+        
+        String sql = "insert into maquinas (nombre, proporcion, activo) values(?, ?, ?);";
+        
+        try{
+            java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
+            cs.setString(1, getNombre());
+            cs.setString(2, getProporcion());;
+            cs.setBoolean(3, isActivo());
+            cs.execute();
+            
+            JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
         }
