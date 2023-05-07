@@ -29,6 +29,7 @@ public class Menu extends javax.swing.JFrame {
     private Insumos_mod mod1 = new Insumos_mod();
     private Personal_mod mod2 = new Personal_mod();
     private Provedores_mod mod3 = new Provedores_mod();
+    private Maquinas_mod mod4 = new Maquinas_mod();
     public Menu() {
         
         UIManager.put("TabbedPane.contentOpaque", false);
@@ -1709,7 +1710,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Campo_combo5.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "provedor_id", "nombre", "email", "telefono", "activo" }));
+        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "nombre", "materiales", "proporcion", "activo" }));
         Campo_combo5.setToolTipText("");
         Campo_combo5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2654,6 +2655,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
         // TODO add your handling code here:
+        Cmaquinas maquinas = new Cmaquinas();
+        maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
+        
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked

@@ -117,4 +117,22 @@ public class Cmaquinas {
             JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    public void seleccionarMaquina(JTable Para_clientes, JTextField busqueda, JComboBox campo) {
+        try {
+            int fila = Para_clientes.getSelectedRow();
+            int colum = Para_clientes.getSelectedColumn();
+            
+            
+            if(fila >= 0) {
+                busqueda.setText(Para_clientes.getValueAt(fila, colum).toString());
+                campo.setSelectedIndex(colum + 1);
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Fila No Seleccionada");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error:\n "+e.toString());
+        }
+    }
 }
