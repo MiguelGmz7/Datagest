@@ -58,6 +58,39 @@ public class Cmaquinas {
         this.activo = activo;
     }
     
+    public void mostrarInsumo(JTable para_maquinas){
+    Cconexion conexion = new Cconexion();
+        
+    DefaultTableModel modelo = new DefaultTableModel();
+    
+    String sql = "select * from insumos_aso where maquina = "+getMaquina_id()+";";
+        
+    modelo.addColumn("Material");
+    modelo.addColumn("Cantidad Usada");
+    modelo.addColumn("Activo");
+    
+    String[] datos = new String[3];
+        
+    java.sql.Statement st;
+    
+    try{
+            st = conexion.EstablecerConexion().createStatement();
+            java.sql.ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()) {
+                datos[0] = rs.getString(2);
+                datos[1] = rs.getString(3);
+                datos[2] = rs.getString(4);
+                
+                modelo.addRow(datos);
+            }
+            
+            para_maquinas.setModel(modelo);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void mostrarMaquinas(JTable para_maquinas){
     Cconexion conexion = new Cconexion();
         

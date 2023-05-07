@@ -30,6 +30,7 @@ public class Menu extends javax.swing.JFrame {
     private Personal_mod mod2 = new Personal_mod();
     private Provedores_mod mod3 = new Provedores_mod();
     private Maquinas_mod mod4 = new Maquinas_mod();
+    private Cmaquinas insumos_aso = new Cmaquinas();
     public Menu() {
         
         UIManager.put("TabbedPane.contentOpaque", false);
@@ -219,6 +220,8 @@ public class Menu extends javax.swing.JFrame {
         Registro_field5 = new javax.swing.JTextField();
         panel_login23 = new javax.swing.JPanel();
         login_btm25 = new javax.swing.JLabel();
+        panel_login24 = new javax.swing.JPanel();
+        login_btm26 = new javax.swing.JLabel();
         Side_panel = new javax.swing.JPanel();
         Nombre1_field = new javax.swing.JLabel();
         Nombre2_field = new javax.swing.JLabel();
@@ -1754,15 +1757,55 @@ public class Menu extends javax.swing.JFrame {
         panel_login23.setLayout(panel_login23Layout);
         panel_login23Layout.setHorizontalGroup(
             panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login23Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(login_btm25, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
         );
         panel_login23Layout.setVerticalGroup(
             panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login23Layout.createSequentialGroup()
+            .addGroup(panel_login23Layout.createSequentialGroup()
+                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panel_login24.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login24MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login24MouseExited(evt);
+            }
+        });
+
+        login_btm26.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm26.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        login_btm26.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm26.setText("MATERIAL");
+        login_btm26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm26.setEnabled(false);
+        login_btm26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm26MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm26MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm26MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login24Layout = new javax.swing.GroupLayout(panel_login24);
+        panel_login24.setLayout(panel_login24Layout);
+        panel_login24Layout.setHorizontalGroup(
+            panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm26, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        panel_login24Layout.setVerticalGroup(
+            panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login24Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(login_btm26, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -1791,7 +1834,9 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(panel_login23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 135, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panel_login24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 21, Short.MAX_VALUE))))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1802,7 +1847,8 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(panel_login23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(panel_login20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panel_login24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panel_login22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1832,7 +1878,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 985, Short.MAX_VALUE)
+            .addGap(0, 997, Short.MAX_VALUE)
             .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel14Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -2142,9 +2188,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 1278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 1288, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2664,7 +2708,9 @@ public class Menu extends javax.swing.JFrame {
         String activom = seleccionarParam(Tb_clientes5, 4);
         
         mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
+        insumos_aso.setMaquina_id(Integer.parseInt(idm));
         login_btm25.setEnabled(true);
+        login_btm26.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
@@ -2717,6 +2763,8 @@ public class Menu extends javax.swing.JFrame {
     private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
         // TODO add your handling code here:
         new Cmaquinas().BuscarMaquina(Tb_clientes5, Campo_combo5, Registro_field5);
+        Registro_field5.setText("");
+        Campo_combo5.setSelectedIndex(0);
     }//GEN-LAST:event_login_btm24MouseClicked
 
     private void login_btm24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseEntered
@@ -2759,6 +2807,28 @@ public class Menu extends javax.swing.JFrame {
     private void panel_login23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_login23MouseExited
+
+    private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
+        // TODO add your handling code here:
+        insumos_aso.mostrarInsumo(Tb_clientes5);
+        
+    }//GEN-LAST:event_login_btm26MouseClicked
+
+    private void login_btm26MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm26MouseEntered
+
+    private void login_btm26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm26MouseExited
+
+    private void panel_login24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login24MouseEntered
+
+    private void panel_login24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login24MouseExited
 
     /**
      * @param args the command line arguments
@@ -2887,6 +2957,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel login_btm23;
     private javax.swing.JLabel login_btm24;
     private javax.swing.JLabel login_btm25;
+    private javax.swing.JLabel login_btm26;
     private javax.swing.JLabel login_btm3;
     private javax.swing.JLabel login_btm4;
     private javax.swing.JLabel login_btm5;
@@ -2907,6 +2978,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel panel_login21;
     private javax.swing.JPanel panel_login22;
     private javax.swing.JPanel panel_login23;
+    private javax.swing.JPanel panel_login24;
     private javax.swing.JPanel panel_login3;
     private javax.swing.JPanel panel_login4;
     private javax.swing.JPanel panel_login5;
