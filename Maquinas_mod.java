@@ -428,12 +428,8 @@ public class Maquinas_mod extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         }
         else {
-            //try {
-                //new Cprovedores().modificarProvedor(Nombre, Nombre_field, Email_field, Act_rb);
-                setVisible(false);
-            //} catch (SQLException e) {
-                Logger.getLogger(Maquinas_mod.class.getName()).log(Level.SEVERE, null, e);
-            //}
+            new Cmaquinas().modificarMaquina(ID.getText(), Nombre_field, Email_field, Act_rb);
+            setVisible(false);
             menu.resetTable();
         }
     }//GEN-LAST:event_login_btm2MouseClicked

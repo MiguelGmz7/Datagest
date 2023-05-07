@@ -135,4 +135,35 @@ public class Cmaquinas {
             JOptionPane.showMessageDialog(null, "Error:\n "+e.toString());
         }
     }
+    
+    public void modificarMaquina(String id, JTextField nombre, JTextField proporcion, JRadioButton activo){
+        try{
+        //String sql_id = "select  provedor_id from provedores where nombre = '"+prenombre+"';";
+        Cconexion conexion = new Cconexion();
+        
+        //java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        //java.sql.ResultSet rs = st.executeQuery(sql_id);
+        
+            //String id = rs.getString("provedor_id");
+            
+            setNombre(nombre.getText());
+            setProporcion(proporcion.getText());
+            setActivo(activo.isSelected());
+            
+            String update = "update maquinas set nombre = ?, proporcion = ?, activo = ? where id = "+id+";";
+        java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
+            cs.setString(1, getNombre());
+            cs.setString(2, getProporcion());
+            cs.setBoolean(3, isActivo());
+            cs.execute();
+        JOptionPane.showMessageDialog(null,"Se Modifico correctamente la información","MODIFICAR",JOptionPane.INFORMATION_MESSAGE);
+        
+       
+        
+
+        }catch(SQLException e){
+        JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+
+        }
+    }
 }

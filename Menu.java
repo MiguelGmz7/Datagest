@@ -2658,6 +2658,13 @@ public class Menu extends javax.swing.JFrame {
         Cmaquinas maquinas = new Cmaquinas();
         maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
         
+        String idm = seleccionarParam(Tb_clientes5, 0);
+        String nombrem = seleccionarParam(Tb_clientes5, 1);
+        String proporcionm = seleccionarParam(Tb_clientes5, 3);
+        String activom = seleccionarParam(Tb_clientes5, 4);
+        
+        mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
+        login_btm25.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
@@ -2733,6 +2740,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
         // TODO add your handling code here:
+        mod4.setVisible(true);
     }//GEN-LAST:event_login_btm25MouseClicked
 
     private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered
