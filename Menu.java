@@ -2716,6 +2716,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
         // TODO add your handling code here:
+        new Cmaquinas().BuscarMaquina(Tb_clientes5, Campo_combo5, Registro_field5);
     }//GEN-LAST:event_login_btm24MouseClicked
 
     private void login_btm24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseEntered

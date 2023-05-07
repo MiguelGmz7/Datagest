@@ -166,4 +166,39 @@ public class Cmaquinas {
 
         }
     }
+    
+    public void BuscarMaquina(JTable para_clientes, JComboBox campo, JTextField busqueda) {
+        String bsq = busqueda.getText();
+        String cam = campo.getSelectedItem().toString();
+        
+        Cconexion conexion = new Cconexion();
+        DefaultTableModel modelo = new DefaultTableModel();
+        String sql = "select * from vista_maquinas where "+cam+" = '"+bsq+"';";
+        
+        modelo.addColumn("ID");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Materiales");
+        modelo.addColumn("Proporcion");
+        modelo.addColumn("Activo");
+        
+        String[] datos = new String[5];
+        
+        try{
+            java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+            java.sql.ResultSet rs = st.executeQuery(sql);
+            
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                
+                modelo.addRow(datos);
+            }
+            para_clientes.setModel(modelo);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }
