@@ -30,9 +30,11 @@ public class Menu extends javax.swing.JFrame {
     private Personal_mod mod2 = new Personal_mod();
     private Provedores_mod mod3 = new Provedores_mod();
     private Maquinas_mod mod4 = new Maquinas_mod();
+    private InsumosAso materiales;
     
     private boolean material = false;
-    public Menu() {
+    public Menu() throws SQLException {
+        this.materiales = new InsumosAso();
         
         UIManager.put("TabbedPane.contentOpaque", false);
         UIManager.put("TabbedPane.contentBorder", false);
@@ -2709,7 +2711,11 @@ public class Menu extends javax.swing.JFrame {
         String activom = seleccionarParam(Tb_clientes5, 4);
         
         mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
-        insumos_aso.setMaquina_id(Integer.parseInt(idm));
+        try {
+            materiales.setMaquina(Integer.parseInt(idm));
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
         login_btm25.setEnabled(true);
         login_btm26.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes5MouseClicked
@@ -2814,8 +2820,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
         // TODO add your handling code here:
-        insumos_aso.mostrarInsumo(Tb_clientes5);
-        
+        materiales.setVisible(true);
         material = true;
     }//GEN-LAST:event_login_btm26MouseClicked
 
@@ -2865,7 +2870,11 @@ public class Menu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                try {
+                    new Menu().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

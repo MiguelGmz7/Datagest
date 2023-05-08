@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,18 +16,32 @@ import javax.swing.table.DefaultTableModel;
  */
 public class InsumosAso extends javax.swing.JFrame {
     int Xmouse, Ymouse;
-    private String ids;
+    private int maquina;
     /**
      * Creates new form Clientes
      */
     public InsumosAso() throws SQLException {
         initComponents();
-        id.setText(ids);
+        
         setCombo();
     }
     
-    public void setid(String idm){
-        ids = idm;
+    
+    public void setMaquina(int maquina) throws SQLException{
+        this.maquina = maquina;
+        
+        String nombre = null;
+        
+        Cconexion conexion = new Cconexion();
+        String sql = "select nombre from maquinas where id = "+maquina+";";
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql);
+        
+        
+        while(rs.next())
+            nombre = rs.getString("nombre");
+        
+        id.setText(nombre);
     }
     
     private void setCombo() throws SQLException{
@@ -663,7 +676,7 @@ public class InsumosAso extends javax.swing.JFrame {
     }//GEN-LAST:event_Act_rbActionPerformed
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-        Menu menu = new Menu();
+
         /*
         if("".equals(Nombre_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
