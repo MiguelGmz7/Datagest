@@ -58,6 +58,31 @@ public class Cmaquinas {
         this.activo = activo;
     }
     
+    public void insumoInsertart(int maquina, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
+        Cconexion conexion = new Cconexion();
+        try{
+        String id_insumo = "select material_id from insumos_en_stock where nombre = '"+material.getSelectedItem().toString()+"';";
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(id_insumo);
+        int num = 0;
+        while(rs.next())
+        num = rs.getInt(1);
+        String sql = "insert into maquina_insumos(maquina, insumo, cantidad, activo) values(?,?,?,?);";
+        
+        
+            java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
+            cs.setInt(1, maquina);
+            cs.setInt(2, num);
+            cs.setInt(3, Integer.parseInt(cantidad.getText()));
+            cs.setBoolean(4, activo.isSelected());
+            cs.execute();
+            
+            JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void mostrarInsumo(JTable para_maquinas){
     Cconexion conexion = new Cconexion();
         

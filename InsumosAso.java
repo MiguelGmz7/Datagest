@@ -83,7 +83,7 @@ public class InsumosAso extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         id = new javax.swing.JLabel();
         label_c1 = new javax.swing.JLabel();
-        Email_field = new javax.swing.JTextField();
+        proporcion = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         label_c4 = new javax.swing.JLabel();
         Act_rb = new javax.swing.JRadioButton();
@@ -91,15 +91,7 @@ public class InsumosAso extends javax.swing.JFrame {
         login_btm2 = new javax.swing.JLabel();
         panel_reset = new javax.swing.JPanel();
         reset_btm = new javax.swing.JLabel();
-        login_btm3 = new javax.swing.JLabel();
-        panel_login1 = new javax.swing.JPanel();
-        login_btm4 = new javax.swing.JLabel();
-        reset_btm1 = new javax.swing.JLabel();
         panel_reset1 = new javax.swing.JPanel();
-        reset_btm2 = new javax.swing.JLabel();
-        login_btm5 = new javax.swing.JLabel();
-        panel_login2 = new javax.swing.JPanel();
-        login_btm6 = new javax.swing.JLabel();
         reset_btm3 = new javax.swing.JLabel();
         Materiales = new javax.swing.JComboBox<>();
         label_c2 = new javax.swing.JLabel();
@@ -214,11 +206,11 @@ public class InsumosAso extends javax.swing.JFrame {
         label_c1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_c1.setText("Proporción");
 
-        Email_field.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Email_field.setBorder(null);
-        Email_field.addActionListener(new java.awt.event.ActionListener() {
+        proporcion.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        proporcion.setBorder(null);
+        proporcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Email_fieldActionPerformed(evt);
+                proporcionActionPerformed(evt);
             }
         });
 
@@ -307,85 +299,6 @@ public class InsumosAso extends javax.swing.JFrame {
             }
         });
 
-        login_btm3.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        login_btm3.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm3.setText("ACEPTAR");
-        login_btm3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm3MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm3MouseExited(evt);
-            }
-        });
-
-        panel_login1.setBackground(new java.awt.Color(246, 150, 143));
-        panel_login1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                panel_login1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                panel_login1MouseExited(evt);
-            }
-        });
-
-        login_btm4.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        login_btm4.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm4.setText("ACEPTAR");
-        login_btm4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm4MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm4MouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_login1Layout = new javax.swing.GroupLayout(panel_login1);
-        panel_login1.setLayout(panel_login1Layout);
-        panel_login1Layout.setHorizontalGroup(
-            panel_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        panel_login1Layout.setVerticalGroup(
-            panel_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        reset_btm1.setBackground(new java.awt.Color(247, 199, 196));
-        reset_btm1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        reset_btm1.setForeground(new java.awt.Color(249, 249, 249));
-        reset_btm1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reset_btm1.setText("RESET");
-        reset_btm1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reset_btm1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reset_btm1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                reset_btm1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                reset_btm1MouseExited(evt);
-            }
-        });
-
         panel_reset1.setBackground(new java.awt.Color(246, 150, 143));
         panel_reset1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -395,85 +308,6 @@ public class InsumosAso extends javax.swing.JFrame {
                 panel_reset1MouseExited(evt);
             }
         });
-
-        reset_btm2.setBackground(new java.awt.Color(247, 199, 196));
-        reset_btm2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        reset_btm2.setForeground(new java.awt.Color(249, 249, 249));
-        reset_btm2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reset_btm2.setText("RESET");
-        reset_btm2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reset_btm2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reset_btm2MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                reset_btm2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                reset_btm2MouseExited(evt);
-            }
-        });
-
-        login_btm5.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        login_btm5.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm5.setText("ACEPTAR");
-        login_btm5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm5MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm5MouseExited(evt);
-            }
-        });
-
-        panel_login2.setBackground(new java.awt.Color(246, 150, 143));
-        panel_login2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                panel_login2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                panel_login2MouseExited(evt);
-            }
-        });
-
-        login_btm6.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        login_btm6.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm6.setText("ACEPTAR");
-        login_btm6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm6MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm6MouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_login2Layout = new javax.swing.GroupLayout(panel_login2);
-        panel_login2.setLayout(panel_login2Layout);
-        panel_login2Layout.setHorizontalGroup(
-            panel_login2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        panel_login2Layout.setVerticalGroup(
-            panel_login2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
 
         reset_btm3.setBackground(new java.awt.Color(247, 199, 196));
         reset_btm3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -497,19 +331,7 @@ public class InsumosAso extends javax.swing.JFrame {
         panel_reset1.setLayout(panel_reset1Layout);
         panel_reset1Layout.setHorizontalGroup(
             panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_reset1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(reset_btm2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_reset1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(login_btm5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_reset1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panel_login2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGap(0, 122, Short.MAX_VALUE)
             .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_reset1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -518,19 +340,7 @@ public class InsumosAso extends javax.swing.JFrame {
         );
         panel_reset1Layout.setVerticalGroup(
             panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_reset1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(reset_btm2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_reset1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(login_btm5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_reset1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panel_login2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGap(0, 38, Short.MAX_VALUE)
             .addGroup(panel_reset1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_reset1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -548,21 +358,6 @@ public class InsumosAso extends javax.swing.JFrame {
             .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_resetLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(login_btm3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panel_login1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(reset_btm1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(panel_reset1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
@@ -571,21 +366,6 @@ public class InsumosAso extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_resetLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(reset_btm, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(login_btm3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panel_login1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_resetLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(reset_btm1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(panel_resetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_resetLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -617,7 +397,7 @@ public class InsumosAso extends javax.swing.JFrame {
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(label_c1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator2)
-                    .addComponent(Email_field, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(proporcion, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label_c4)
@@ -641,7 +421,7 @@ public class InsumosAso extends javax.swing.JFrame {
                     .addComponent(label_c2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Email_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(proporcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Act_rb)
                     .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
@@ -667,9 +447,9 @@ public class InsumosAso extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Email_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Email_fieldActionPerformed
+    private void proporcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proporcionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Email_fieldActionPerformed
+    }//GEN-LAST:event_proporcionActionPerformed
 
     private void Act_rbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Act_rbActionPerformed
         // TODO add your handling code here:
@@ -677,16 +457,11 @@ public class InsumosAso extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
 
-        /*
-        if("".equals(Nombre_field.getText())){
-            JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
-        } 
-        else {
-            new Cmaquinas().insertartMaquina(Nombre_field, Email_field, Act_rb);
-            menu.resetTable();
+        try {
+            new Cmaquinas().insumoInsertart(maquina, Materiales, proporcion, Act_rb);
+        } catch (SQLException ex) {
+            Logger.getLogger(InsumosAso.class.getName()).log(Level.SEVERE, null, ex);
         }
-        setVisible(false);
-        */
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
@@ -704,28 +479,6 @@ public class InsumosAso extends javax.swing.JFrame {
     private void panel_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_loginMouseExited
         panel_login.setBackground(Color.decode("#f6968f"));
     }//GEN-LAST:event_panel_loginMouseExited
-
-    private void reset_btmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseClicked
-        //Nombre_field.setText(null);
-        Email_field.setText(null);
-        Act_rb.setSelected(false);
-    }//GEN-LAST:event_reset_btmMouseClicked
-
-    private void reset_btmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseEntered
-        panel_reset.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_reset_btmMouseEntered
-
-    private void reset_btmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseExited
-        panel_reset.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_reset_btmMouseExited
-
-    private void panel_resetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_resetMouseEntered
-        panel_reset.setBackground(Color.decode("#f5655a"));
-    }//GEN-LAST:event_panel_resetMouseEntered
-
-    private void panel_resetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_resetMouseExited
-        panel_reset.setBackground(Color.decode("#f6968f"));
-    }//GEN-LAST:event_panel_resetMouseExited
 
     private void exit_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseClicked
         setVisible(false);
@@ -761,117 +514,51 @@ public class InsumosAso extends javax.swing.JFrame {
 
     }//GEN-LAST:event_selectorMousePressed
 
-    private void login_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseClicked
+    private void MaterialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaterialesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm3MouseClicked
+    }//GEN-LAST:event_MaterialesActionPerformed
 
-    private void login_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm3MouseEntered
+    private void panel_resetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_resetMouseExited
+        panel_reset.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_panel_resetMouseExited
 
-    private void login_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm3MouseExited
-
-    private void login_btm4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm4MouseClicked
-
-    private void login_btm4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm4MouseEntered
-
-    private void login_btm4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm4MouseExited
-
-    private void panel_login1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login1MouseEntered
-
-    private void panel_login1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login1MouseExited
-
-    private void reset_btm1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm1MouseClicked
-
-    private void reset_btm1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm1MouseEntered
-
-    private void reset_btm1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm1MouseExited
-
-    private void reset_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm2MouseClicked
-
-    private void reset_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm2MouseEntered
-
-    private void reset_btm2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm2MouseExited
-
-    private void login_btm5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm5MouseClicked
-
-    private void login_btm5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm5MouseEntered
-
-    private void login_btm5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm5MouseExited
-
-    private void login_btm6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm6MouseClicked
-
-    private void login_btm6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm6MouseEntered
-
-    private void login_btm6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm6MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm6MouseExited
-
-    private void panel_login2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login2MouseEntered
-
-    private void panel_login2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login2MouseExited
-
-    private void reset_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm3MouseClicked
-
-    private void reset_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm3MouseEntered
-
-    private void reset_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reset_btm3MouseExited
-
-    private void panel_reset1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_reset1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_reset1MouseEntered
+    private void panel_resetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_resetMouseEntered
+        panel_reset.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_panel_resetMouseEntered
 
     private void panel_reset1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_reset1MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_reset1MouseExited
 
-    private void MaterialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaterialesActionPerformed
+    private void panel_reset1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_reset1MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_MaterialesActionPerformed
+    }//GEN-LAST:event_panel_reset1MouseEntered
+
+    private void reset_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reset_btm3MouseExited
+
+    private void reset_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reset_btm3MouseEntered
+
+    private void reset_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btm3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reset_btm3MouseClicked
+
+    private void reset_btmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseExited
+        panel_reset.setBackground(Color.decode("#f6968f"));
+    }//GEN-LAST:event_reset_btmMouseExited
+
+    private void reset_btmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseEntered
+        panel_reset.setBackground(Color.decode("#f5655a"));
+    }//GEN-LAST:event_reset_btmMouseEntered
+
+    private void reset_btmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseClicked
+        //Nombre_field.setText(null);
+        proporcion.setText(null);
+        Act_rb.setSelected(false);
+    }//GEN-LAST:event_reset_btmMouseClicked
 
     /**
      * @param args the command line arguments
@@ -921,7 +608,6 @@ public class InsumosAso extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Act_rb;
-    private javax.swing.JTextField Email_field;
     private javax.swing.JPanel Fondo;
     private javax.swing.JComboBox<String> Materiales;
     private javax.swing.JLabel exit_label;
@@ -934,18 +620,11 @@ public class InsumosAso extends javax.swing.JFrame {
     private javax.swing.JLabel label_c2;
     private javax.swing.JLabel label_c4;
     private javax.swing.JLabel login_btm2;
-    private javax.swing.JLabel login_btm3;
-    private javax.swing.JLabel login_btm4;
-    private javax.swing.JLabel login_btm5;
-    private javax.swing.JLabel login_btm6;
     private javax.swing.JPanel panel_login;
-    private javax.swing.JPanel panel_login1;
-    private javax.swing.JPanel panel_login2;
     private javax.swing.JPanel panel_reset;
     private javax.swing.JPanel panel_reset1;
+    private javax.swing.JTextField proporcion;
     private javax.swing.JLabel reset_btm;
-    private javax.swing.JLabel reset_btm1;
-    private javax.swing.JLabel reset_btm2;
     private javax.swing.JLabel reset_btm3;
     private javax.swing.JPanel selector;
     // End of variables declaration//GEN-END:variables

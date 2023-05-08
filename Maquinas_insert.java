@@ -383,13 +383,12 @@ public class Maquinas_insert extends javax.swing.JFrame {
     }//GEN-LAST:event_Act_rbActionPerformed
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-        Menu menu = new Menu();
+
         if("".equals(Nombre_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
         else {
             new Cmaquinas().insertartMaquina(Nombre_field, Email_field, Act_rb);
-            menu.resetTable();
         }
         setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked

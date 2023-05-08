@@ -423,14 +423,12 @@ public class Maquinas_mod extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
 
-        Menu menu = new Menu();
         if("".equals(Nombre_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         }
         else {
             new Cmaquinas().modificarMaquina(ID.getText(), Nombre_field, Email_field, Act_rb);
             setVisible(false);
-            menu.resetTable();
         }
     }//GEN-LAST:event_login_btm2MouseClicked
 
