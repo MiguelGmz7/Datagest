@@ -30,7 +30,8 @@ public class Menu extends javax.swing.JFrame {
     private Personal_mod mod2 = new Personal_mod();
     private Provedores_mod mod3 = new Provedores_mod();
     private Maquinas_mod mod4 = new Maquinas_mod();
-    private Cmaquinas insumos_aso = new Cmaquinas();
+    
+    private boolean material = false;
     public Menu() {
         
         UIManager.put("TabbedPane.contentOpaque", false);
@@ -2715,11 +2716,14 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
         // TODO add your handling code here:
-        try {
-            // TODO add your handling code here:
-            new Maquinas_insert().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        if (material == false) 
+        {
+            try {
+                new Maquinas_insert().setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {   
         }
     }//GEN-LAST:event_login_btm22MouseClicked
 
@@ -2812,6 +2816,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         insumos_aso.mostrarInsumo(Tb_clientes5);
         
+        material = true;
     }//GEN-LAST:event_login_btm26MouseClicked
 
     private void login_btm26MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseEntered

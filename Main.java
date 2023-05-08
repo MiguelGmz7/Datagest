@@ -5,6 +5,7 @@
 package com.app;
 
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 
 /**
  *
@@ -12,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Main {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, SQLException {
         
         //Encript contra = new Encript();
         
@@ -23,6 +24,7 @@ public class Main {
         //new Login().setVisible(true);
         new Menu().setVisible(true);
         //new Clientes().setVisible(true);
+        //new insumosAso().setVisible(true);
     }
     
 }
