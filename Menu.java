@@ -31,6 +31,7 @@ public class Menu extends javax.swing.JFrame {
     private Provedores_mod mod3 = new Provedores_mod();
     private Maquinas_mod mod4 = new Maquinas_mod();
     private InsumosAso materiales;
+    private Cmaquinas est = new Cmaquinas();
     
     private boolean material = false;
     public Menu() throws SQLException {
@@ -2711,6 +2712,7 @@ public class Menu extends javax.swing.JFrame {
         String activom = seleccionarParam(Tb_clientes5, 4);
         
         mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
+        est.setMaquina_id(Integer.parseInt(idm));
         try {
             materiales.setMaquina(Integer.parseInt(idm));
         } catch (SQLException ex) {
@@ -2729,7 +2731,8 @@ public class Menu extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {   
+        } else {
+            materiales.setVisible(true);
         }
     }//GEN-LAST:event_login_btm22MouseClicked
 
@@ -2752,6 +2755,7 @@ public class Menu extends javax.swing.JFrame {
     private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
         // TODO add your handling code here:
         new Cmaquinas().mostrarMaquinas(Tb_clientes5);
+        material = false;
     }//GEN-LAST:event_login_btm23MouseClicked
 
     private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered
@@ -2820,7 +2824,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
         // TODO add your handling code here:
-        materiales.setVisible(true);
+        //materiales.setVisible(true);
+        est.mostrarInsumo(Tb_clientes5);
         material = true;
     }//GEN-LAST:event_login_btm26MouseClicked
 
