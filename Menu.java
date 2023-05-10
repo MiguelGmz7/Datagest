@@ -240,7 +240,7 @@ public class Menu extends javax.swing.JFrame {
         Personal_panel = new javax.swing.JPanel();
         Pesonal_field = new javax.swing.JLabel();
         Proveedores_panel = new javax.swing.JPanel();
-        Proveedores_field = new javax.swing.JLabel();
+        Maquinas_field = new javax.swing.JLabel();
         Exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -260,14 +260,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 40, 430, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 770, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -1925,7 +1925,7 @@ public class Menu extends javax.swing.JFrame {
         Clientes_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         Clientes_field.setForeground(new java.awt.Color(255, 255, 255));
         Clientes_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Clientes_field.setText("CLIENTES ");
+        Clientes_field.setText("INSUMOS");
         Clientes_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Clientes_field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1951,7 +1951,7 @@ public class Menu extends javax.swing.JFrame {
         Usario_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         Usario_field.setForeground(new java.awt.Color(255, 255, 255));
         Usario_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Usario_field.setText("USUARIO");
+        Usario_field.setText("CLIENTES");
         Usario_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Usario_field.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -1996,7 +1996,7 @@ public class Menu extends javax.swing.JFrame {
         Insumos_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         Insumos_field.setForeground(new java.awt.Color(255, 255, 255));
         Insumos_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Insumos_field.setText("INSUMOS");
+        Insumos_field.setText("PERSONAL");
         Insumos_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Insumos_field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2022,7 +2022,7 @@ public class Menu extends javax.swing.JFrame {
         Pesonal_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         Pesonal_field.setForeground(new java.awt.Color(255, 255, 255));
         Pesonal_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pesonal_field.setText("PERSONAL");
+        Pesonal_field.setText("PROVEEDORES");
         Pesonal_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Pesonal_field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2045,14 +2045,14 @@ public class Menu extends javax.swing.JFrame {
 
         Proveedores_panel.setBackground(new java.awt.Color(246, 150, 143));
 
-        Proveedores_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
-        Proveedores_field.setForeground(new java.awt.Color(255, 255, 255));
-        Proveedores_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Proveedores_field.setText("PROVEEDORES");
-        Proveedores_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Proveedores_field.addMouseListener(new java.awt.event.MouseAdapter() {
+        Maquinas_field.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
+        Maquinas_field.setForeground(new java.awt.Color(255, 255, 255));
+        Maquinas_field.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Maquinas_field.setText("MAQUINAS");
+        Maquinas_field.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Maquinas_field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Proveedores_fieldMouseClicked(evt);
+                Maquinas_fieldMouseClicked(evt);
             }
         });
 
@@ -2060,12 +2060,12 @@ public class Menu extends javax.swing.JFrame {
         Proveedores_panel.setLayout(Proveedores_panelLayout);
         Proveedores_panelLayout.setHorizontalGroup(
             Proveedores_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Proveedores_field, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+            .addComponent(Maquinas_field, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
         );
         Proveedores_panelLayout.setVerticalGroup(
             Proveedores_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Proveedores_panelLayout.createSequentialGroup()
-                .addComponent(Proveedores_field, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addComponent(Maquinas_field, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -2198,7 +2198,7 @@ public class Menu extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 739, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -2231,28 +2231,28 @@ public class Menu extends javax.swing.JFrame {
 
     private void Usario_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usario_fieldMouseClicked
         // TODO add your handling code here:
-        Display_tab.setSelectedIndex(4);
+        Display_tab.setSelectedIndex(0);
     }//GEN-LAST:event_Usario_fieldMouseClicked
 
     private void Clientes_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Clientes_fieldMouseClicked
         // TODO add your handling code here:
-        Display_tab.setSelectedIndex(0);
+        Display_tab.setSelectedIndex(1);
     }//GEN-LAST:event_Clientes_fieldMouseClicked
 
     private void Insumos_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Insumos_fieldMouseClicked
         // TODO add your handling code here:
-        Display_tab.setSelectedIndex(1);
+        Display_tab.setSelectedIndex(2);
     }//GEN-LAST:event_Insumos_fieldMouseClicked
 
     private void Pesonal_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesonal_fieldMouseClicked
         // TODO add your handling code here:
-        Display_tab.setSelectedIndex(2);
+        Display_tab.setSelectedIndex(3);
     }//GEN-LAST:event_Pesonal_fieldMouseClicked
 
-    private void Proveedores_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Proveedores_fieldMouseClicked
+    private void Maquinas_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Maquinas_fieldMouseClicked
         // TODO add your handling code here:
-        Display_tab.setSelectedIndex(3);
-    }//GEN-LAST:event_Proveedores_fieldMouseClicked
+        Display_tab.setSelectedIndex(5);
+    }//GEN-LAST:event_Maquinas_fieldMouseClicked
 
     private void Usario_fieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Usario_fieldFocusGained
         // TODO add your handling code here:
@@ -2267,6 +2267,173 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Usuario_panel.setBackground(new Color(246,150,143));
     }//GEN-LAST:event_Usario_fieldMouseExited
+
+    private void panel_login24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login24MouseExited
+
+    private void panel_login24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login24MouseEntered
+
+    private void login_btm26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm26MouseExited
+
+    private void login_btm26MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm26MouseEntered
+
+    private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
+        // TODO add your handling code here:
+        //materiales.setVisible(true);
+        est.mostrarInsumo(Tb_clientes5);
+        material = true;
+    }//GEN-LAST:event_login_btm26MouseClicked
+
+    private void panel_login23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login23MouseExited
+
+    private void panel_login23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login23MouseEntered
+
+    private void login_btm25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm25MouseExited
+
+    private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm25MouseEntered
+
+    private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
+        // TODO add your handling code here:
+        if(material == false){
+            mod4.setVisible(true);
+        }
+        else{
+            insumo_mod.setVisible(true);
+        }
+    }//GEN-LAST:event_login_btm25MouseClicked
+
+    private void Campo_combo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_combo5ActionPerformed
+
+    private void panel_login22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login22MouseExited
+
+    private void panel_login22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login22MouseEntered
+
+    private void login_btm24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm24MouseExited
+
+    private void login_btm24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm24MouseEntered
+
+    private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
+        // TODO add your handling code here:
+        new Cmaquinas().BuscarMaquina(Tb_clientes5, Campo_combo5, Registro_field5);
+        Registro_field5.setText("");
+        Campo_combo5.setSelectedIndex(0);
+    }//GEN-LAST:event_login_btm24MouseClicked
+
+    private void panel_login21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login21MouseExited
+
+    private void panel_login21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login21MouseEntered
+
+    private void login_btm23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm23MouseExited
+
+    private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm23MouseEntered
+
+    private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
+        // TODO add your handling code here:
+        new Cmaquinas().mostrarMaquinas(Tb_clientes5);
+        material = false;
+    }//GEN-LAST:event_login_btm23MouseClicked
+
+    private void panel_login20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login20MouseExited
+
+    private void panel_login20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login20MouseEntered
+
+    private void login_btm22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm22MouseExited
+
+    private void login_btm22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm22MouseEntered
+
+    private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
+        // TODO add your handling code here:
+        if (material == false)
+        {
+            try {
+                new Maquinas_insert().setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            materiales.setVisible(true);
+        }
+    }//GEN-LAST:event_login_btm22MouseClicked
+
+    private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
+        // TODO add your handling code here:
+        if(material == false){
+            Cmaquinas maquinas = new Cmaquinas();
+            maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
+
+            String idm = seleccionarParam(Tb_clientes5, 0);
+            String nombrem = seleccionarParam(Tb_clientes5, 1);
+            String proporcionm = seleccionarParam(Tb_clientes5, 3);
+            String activom = seleccionarParam(Tb_clientes5, 4);
+
+            mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
+            est.setMaquina_id(Integer.parseInt(idm));
+            try {
+                insumo_mod.setMaquina(Integer.parseInt(idm));
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try {
+                materiales.setMaquina(Integer.parseInt(idm));
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            login_btm25.setEnabled(true);
+            login_btm26.setEnabled(true);
+        } else {
+            String idmod = seleccionarParam(Tb_clientes5, 0);
+            String insumod = seleccionarParam(Tb_clientes5, 1);
+            String cantidadm = seleccionarParam(Tb_clientes5, 2);
+            String activom = seleccionarParam(Tb_clientes5, 3);
+            try {
+                insumo_mod.setParam(idmod,insumod,cantidadm, activom);
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void panel_login15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login15MouseExited
         // TODO add your handling code here:
@@ -2702,173 +2869,6 @@ public class Menu extends javax.swing.JFrame {
         login_btm5.setEnabled(true);
     }//GEN-LAST:event_Tb_clientesMouseClicked
 
-    private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
-        // TODO add your handling code here:
-        if(material == false){
-        Cmaquinas maquinas = new Cmaquinas();
-        maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
-        
-        String idm = seleccionarParam(Tb_clientes5, 0);
-        String nombrem = seleccionarParam(Tb_clientes5, 1);
-        String proporcionm = seleccionarParam(Tb_clientes5, 3);
-        String activom = seleccionarParam(Tb_clientes5, 4);
-        
-        mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
-        est.setMaquina_id(Integer.parseInt(idm));
-            try {
-                insumo_mod.setMaquina(Integer.parseInt(idm));
-            } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        
-        try {
-            materiales.setMaquina(Integer.parseInt(idm));
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        login_btm25.setEnabled(true);
-        login_btm26.setEnabled(true);
-        } else {
-            String idmod = seleccionarParam(Tb_clientes5, 0);
-            String insumod = seleccionarParam(Tb_clientes5, 1);
-            String cantidadm = seleccionarParam(Tb_clientes5, 2);
-            String activom = seleccionarParam(Tb_clientes5, 3);
-            try {
-                insumo_mod.setParam(idmod,insumod,cantidadm, activom);
-            } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }//GEN-LAST:event_Tb_clientes5MouseClicked
-
-    private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
-        // TODO add your handling code here:
-        if (material == false) 
-        {
-            try {
-                new Maquinas_insert().setVisible(true);
-            } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } else {
-            materiales.setVisible(true);
-        }
-    }//GEN-LAST:event_login_btm22MouseClicked
-
-    private void login_btm22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm22MouseEntered
-
-    private void login_btm22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm22MouseExited
-
-    private void panel_login20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login20MouseEntered
-
-    private void panel_login20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login20MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login20MouseExited
-
-    private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
-        // TODO add your handling code here:
-        new Cmaquinas().mostrarMaquinas(Tb_clientes5);
-        material = false;
-    }//GEN-LAST:event_login_btm23MouseClicked
-
-    private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm23MouseEntered
-
-    private void login_btm23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm23MouseExited
-
-    private void panel_login21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login21MouseEntered
-
-    private void panel_login21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login21MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login21MouseExited
-
-    private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
-        // TODO add your handling code here:
-        new Cmaquinas().BuscarMaquina(Tb_clientes5, Campo_combo5, Registro_field5);
-        Registro_field5.setText("");
-        Campo_combo5.setSelectedIndex(0);
-    }//GEN-LAST:event_login_btm24MouseClicked
-
-    private void login_btm24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm24MouseEntered
-
-    private void login_btm24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm24MouseExited
-
-    private void panel_login22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login22MouseEntered
-
-    private void panel_login22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login22MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login22MouseExited
-
-    private void Campo_combo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_combo5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Campo_combo5ActionPerformed
-
-    private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
-        // TODO add your handling code here:
-        if(material == false){
-            mod4.setVisible(true);
-        }
-        else{
-            insumo_mod.setVisible(true);
-        }    
-    }//GEN-LAST:event_login_btm25MouseClicked
-
-    private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm25MouseEntered
-
-    private void login_btm25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm25MouseExited
-
-    private void panel_login23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login23MouseEntered
-
-    private void panel_login23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login23MouseExited
-
-    private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
-        // TODO add your handling code here:
-        //materiales.setVisible(true);
-        est.mostrarInsumo(Tb_clientes5);
-        material = true;
-    }//GEN-LAST:event_login_btm26MouseClicked
-
-    private void login_btm26MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm26MouseEntered
-
-    private void login_btm26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm26MouseExited
-
-    private void panel_login24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login24MouseEntered
-
-    private void panel_login24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login24MouseExited
-
     /**
      * @param args the command line arguments
      */
@@ -2922,11 +2922,11 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel Fondo;
     private javax.swing.JLabel Insumos_field;
     private javax.swing.JPanel Insumos_panel;
+    private javax.swing.JLabel Maquinas_field;
     private javax.swing.JLabel Nombre1_field;
     private javax.swing.JLabel Nombre2_field;
     private javax.swing.JPanel Personal_panel;
     private javax.swing.JLabel Pesonal_field;
-    private javax.swing.JLabel Proveedores_field;
     private javax.swing.JPanel Proveedores_panel;
     private javax.swing.JTextField Registro_field;
     private javax.swing.JTextField Registro_field1;
