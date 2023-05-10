@@ -2729,10 +2729,15 @@ public class Menu extends javax.swing.JFrame {
         login_btm25.setEnabled(true);
         login_btm26.setEnabled(true);
         } else {
-            String insumod = seleccionarParam(Tb_clientes5, 0);
-            String cantidadm = seleccionarParam(Tb_clientes5, 1);
-            String activom = seleccionarParam(Tb_clientes5, 2);
-            insumo_mod.setParam(insumod,cantidadm, activom);
+            String idmod = seleccionarParam(Tb_clientes5, 0);
+            String insumod = seleccionarParam(Tb_clientes5, 1);
+            String cantidadm = seleccionarParam(Tb_clientes5, 2);
+            String activom = seleccionarParam(Tb_clientes5, 3);
+            try {
+                insumo_mod.setParam(idmod,insumod,cantidadm, activom);
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 

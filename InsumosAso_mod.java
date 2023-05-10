@@ -16,7 +16,7 @@ import javax.swing.*;
  */
 public class InsumosAso_mod extends javax.swing.JFrame {
     int Xmouse, Ymouse;
-    private int maquina, insumo, cantidad;
+    private int registro, maquina, insumo, cantidad;
     private boolean activo;
     /**
      * Creates new form Clientes
@@ -26,7 +26,9 @@ public class InsumosAso_mod extends javax.swing.JFrame {
         setCombo();
     }
     
-    public void setParam(String insumo, String cantidad, String activo) throws SQLException{
+    public void setParam(String registro, String insumo, String cantidad, String activo) throws SQLException{
+        this.registro = Integer.parseInt(registro);
+        
         String sql = "select material_id from insumos_en_stock where nombre = '"+insumo+"';";
         Cconexion conexion = new Cconexion();
         java.sql.Statement st = conexion.EstablecerConexion().createStatement();
@@ -480,7 +482,7 @@ public class InsumosAso_mod extends javax.swing.JFrame {
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
 
         try {
-            new Cmaquinas().insumoInsertart(maquina, Materiales, proporcion, Act_rb);
+            new Cmaquinas().insumoModificar(registro, Materiales, proporcion, Act_rb);
             setVisible(false);
         } catch (SQLException ex) {
             Logger.getLogger(InsumosAso_mod.class.getName()).log(Level.SEVERE, null, ex);

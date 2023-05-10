@@ -58,6 +58,30 @@ public class Cmaquinas {
         this.activo = activo;
     }
     
+    public void insumoModificar(int registro, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
+        Cconexion conexion = new Cconexion();
+        try{
+        String id_insumo = "select material_id from insumos_en_stock where nombre = '"+material.getSelectedItem().toString()+"';";
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(id_insumo);
+        int num = 0;
+        while(rs.next())
+        num = rs.getInt(1);
+        
+        String update = "update maquina_insumos set insumo = ?, cantidad = ?, activo = ? where id = "+registro+";";
+        
+            java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
+            cs.setInt(1, num);
+            cs.setInt(2, Integer.parseInt(cantidad.getText()));
+            cs.setBoolean(3, activo.isSelected());
+            cs.execute();
+            
+            JOptionPane.showMessageDialog(null,"Se modfico correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void insumoInsertart(int maquina, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
         Cconexion conexion = new Cconexion();
         try{
@@ -90,11 +114,12 @@ public class Cmaquinas {
     
     String sql = "select * from insumos_aso where maquina = "+getMaquina_id()+";";
         
+    modelo.addColumn("ID");
     modelo.addColumn("Material");
     modelo.addColumn("Cantidad Usada");
     modelo.addColumn("Activo");
     
-    String[] datos = new String[3];
+    String[] datos = new String[4];
         
     java.sql.Statement st;
     
@@ -103,9 +128,10 @@ public class Cmaquinas {
             java.sql.ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()) {
-                datos[0] = rs.getString(2);
+                datos[0] = rs.getString(1);
                 datos[1] = rs.getString(3);
                 datos[2] = rs.getString(4);
+                datos[3] = rs.getString(5);
                 
                 modelo.addRow(datos);
             }
