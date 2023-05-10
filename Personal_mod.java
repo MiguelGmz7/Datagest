@@ -541,7 +541,6 @@ public class Personal_mod extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         
-        Menu menu = new Menu();
         if("".equals(Nombre1_field.getText())|| "".equals(Ape_field.getText()) || "".equals(Email_field.getText()) || "".equals(Puesto_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
@@ -552,7 +551,6 @@ public class Personal_mod extends javax.swing.JFrame {
                 Logger.getLogger(Personal_mod.class.getName()).log(Level.SEVERE, null, ex);
             }
             setVisible(false);
-            menu.resetTable();
         }
     }//GEN-LAST:event_login_btm2MouseClicked
 

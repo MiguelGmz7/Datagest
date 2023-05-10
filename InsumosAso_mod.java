@@ -14,18 +14,40 @@ import javax.swing.*;
  *
  * @author oscar
  */
-public class InsumosAso extends javax.swing.JFrame {
+public class InsumosAso_mod extends javax.swing.JFrame {
     int Xmouse, Ymouse;
-    private int maquina;
+    private int maquina, insumo, cantidad;
+    private boolean activo;
     /**
      * Creates new form Clientes
      */
-    public InsumosAso() throws SQLException {
+    public InsumosAso_mod() throws SQLException {
         initComponents();
-        
         setCombo();
     }
     
+    public void setParam(String insumo, String cantidad, String activo) throws SQLException{
+        String sql = "select material_id from insumos_en_stock where nombre = '"+insumo+"';";
+        Cconexion conexion = new Cconexion();
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql);
+        int nombre = 0;
+        while(rs.next())
+            nombre = rs.getInt(1);
+        this.insumo = nombre;
+        Materiales.setSelectedItem(insumo);
+        
+        this.cantidad = Integer.parseInt(cantidad);
+        proporcion.setText(cantidad);
+        
+        if(activo.equals("t")) {
+            this.activo = true;
+        } else {
+            this.activo = false;
+        }
+        
+        Act_rb.setSelected(this.activo);
+    }
     
     public void setMaquina(int maquina) throws SQLException{
         this.maquina = maquina;
@@ -157,7 +179,7 @@ public class InsumosAso extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Agregar Material");
+        jLabel1.setText("Modificar Maquina");
 
         id.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         id.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +197,7 @@ public class InsumosAso extends javax.swing.JFrame {
                 .addGroup(selectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(selectorLayout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(0, 24, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -204,7 +226,7 @@ public class InsumosAso extends javax.swing.JFrame {
         );
 
         label_c1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        label_c1.setText("Cantidad");
+        label_c1.setText("Proporción");
 
         proporcion.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         proporcion.setBorder(null);
@@ -402,7 +424,7 @@ public class InsumosAso extends javax.swing.JFrame {
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label_c4)
                     .addComponent(Act_rb, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(FondoLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -461,7 +483,7 @@ public class InsumosAso extends javax.swing.JFrame {
             new Cmaquinas().insumoInsertart(maquina, Materiales, proporcion, Act_rb);
             setVisible(false);
         } catch (SQLException ex) {
-            Logger.getLogger(InsumosAso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InsumosAso_mod.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_login_btm2MouseClicked
 
@@ -578,14 +600,22 @@ public class InsumosAso extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InsumosAso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsumosAso_mod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InsumosAso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsumosAso_mod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InsumosAso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsumosAso_mod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InsumosAso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsumosAso_mod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -599,9 +629,9 @@ public class InsumosAso extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new InsumosAso().setVisible(true);
+                    new InsumosAso_mod().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(InsumosAso.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(InsumosAso_mod.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

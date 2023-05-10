@@ -483,7 +483,6 @@ public class Clientes_mod extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         Cclientes clientes = new Cclientes();
-        Menu menu = new Menu();
         if("".equals(Nombre_field.getText()) || "".equals(Dir_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
@@ -494,7 +493,6 @@ public class Clientes_mod extends javax.swing.JFrame {
             } catch (SQLException e) {
                 Logger.getLogger(Clientes_mod.class.getName()).log(Level.SEVERE, null, e);
             }
-            menu.resetTable();
         }
     }//GEN-LAST:event_login_btm2MouseClicked
 

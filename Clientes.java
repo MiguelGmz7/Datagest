@@ -450,13 +450,11 @@ public class Clientes extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         Cclientes clientes = new Cclientes();
-        Menu menu = new Menu();
         if("".equals(Nombre_field.getText()) || "".equals(Dir_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
         else {
             clientes.InsertarClientes(Nombre_field, Email_field, Tel_field, Dir_field, Act_rb);
-            menu.resetTable();
         }
         setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked

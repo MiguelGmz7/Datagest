@@ -570,7 +570,6 @@ public class Personal_insert extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         
-        Menu menu = new Menu();
         if("".equals(Nombre1_field.getText()) || "".equals(Puesto_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         } 
@@ -580,7 +579,6 @@ public class Personal_insert extends javax.swing.JFrame {
             } catch (NoSuchAlgorithmException ex) {
                 Logger.getLogger(Personal_insert.class.getName()).log(Level.SEVERE, null, ex);
             }
-            menu.resetTable();
         }
         setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked

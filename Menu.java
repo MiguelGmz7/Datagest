@@ -30,12 +30,13 @@ public class Menu extends javax.swing.JFrame {
     private Personal_mod mod2 = new Personal_mod();
     private Provedores_mod mod3 = new Provedores_mod();
     private Maquinas_mod mod4 = new Maquinas_mod();
-    private InsumosAso materiales;
+    private InsumosAso materiales = new InsumosAso();
     private Cmaquinas est = new Cmaquinas();
+    private InsumosAso_mod insumo_mod = new InsumosAso_mod();
     
     private boolean material = false;
     public Menu() throws SQLException {
-        this.materiales = new InsumosAso();
+        //this.materiales = new InsumosAso();
         
         UIManager.put("TabbedPane.contentOpaque", false);
         UIManager.put("TabbedPane.contentBorder", false);
@@ -2703,6 +2704,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
         // TODO add your handling code here:
+        if(material == false){
         Cmaquinas maquinas = new Cmaquinas();
         maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
         
@@ -2713,6 +2715,12 @@ public class Menu extends javax.swing.JFrame {
         
         mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
         est.setMaquina_id(Integer.parseInt(idm));
+            try {
+                insumo_mod.setMaquina(Integer.parseInt(idm));
+            } catch (SQLException ex) {
+                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
         try {
             materiales.setMaquina(Integer.parseInt(idm));
         } catch (SQLException ex) {
@@ -2720,6 +2728,12 @@ public class Menu extends javax.swing.JFrame {
         }
         login_btm25.setEnabled(true);
         login_btm26.setEnabled(true);
+        } else {
+            String insumod = seleccionarParam(Tb_clientes5, 0);
+            String cantidadm = seleccionarParam(Tb_clientes5, 1);
+            String activom = seleccionarParam(Tb_clientes5, 2);
+            insumo_mod.setParam(insumod,cantidadm, activom);
+        }
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
@@ -2803,7 +2817,12 @@ public class Menu extends javax.swing.JFrame {
 
     private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
         // TODO add your handling code here:
-        mod4.setVisible(true);
+        if(material == false){
+            mod4.setVisible(true);
+        }
+        else{
+            insumo_mod.setVisible(true);
+        }    
     }//GEN-LAST:event_login_btm25MouseClicked
 
     private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered

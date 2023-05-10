@@ -404,13 +404,11 @@ public class Insumos_insert extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         Cinzumos insumos  = new Cinzumos();
-        Menu menu = new Menu();
         if("".equals(Nombre_field.getText())){
             JOptionPane.showMessageDialog(null,"Un campo obligatorio no se ingreso","Error",JOptionPane.ERROR_MESSAGE);
         }
         else {
             insumos.InsertarInsumos(Nombre_field, Tel_field, Act_rb);
-            menu.resetTable();
         }
         setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked

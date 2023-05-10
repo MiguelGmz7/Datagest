@@ -105,7 +105,7 @@ public class Cinzumos {
         try{
             java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
             cs.setString(1, getNombre());
-            cs.setString(2, getCantidad());
+            cs.setInt(2, Integer.parseInt(getCantidad()));
             cs.setBoolean(3, isActivo());
             cs.execute();
             
