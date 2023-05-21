@@ -22,9 +22,10 @@ public class Main {
         //System.out.println(mensaje);
         
         //new Login().setVisible(true);
-        new Menu().setVisible(true);
+        //new Menu().setVisible(true);
         //new Clientes().setVisible(true);
         //new InsumosAso().setVisible(true);
+        new Proyectos().setVisible(true);
     }
     
 }
