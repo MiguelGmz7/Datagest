@@ -365,7 +365,7 @@ public class Proyectos extends javax.swing.JFrame {
 
     private void login_btm15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseClicked
         // TODO add your handling code here:
-        new Cprovedores().mostrarProvedor(Tb_clientes3);
+        new Cproyectos().mostrarProyecto(Tb_clientes3);
     }//GEN-LAST:event_login_btm15MouseClicked
 
     private void login_btm15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm15MouseEntered

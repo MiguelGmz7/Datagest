@@ -5,6 +5,9 @@
 package com.app;
 
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
@@ -122,20 +125,41 @@ public class Cproyectos {
         }
     }
     
-    public void InsertarProvedor(JTextField nombre, JTextField email, JTextField telefono, JRadioButton activo) {
+    public void InsertarProyecto(JTextField nombre, JTextField fecha_i, JTextField fecha_f, JComboBox cliente, JComboBox maquina, JRadioButton activo) throws ParseException {
         setNombre(nombre.getText());
         
         setActivo(activo.isSelected());
         
         Cconexion conexion = new Cconexion();
         
-        String sql = "insert into provedores (nombre, email, telefono, activo) values(?, ?, ?, ?);";
-        
         try{
+        String sql = "insert into proyectos (nombre, fecha_i, fecha_f, cliente_id, maquina_id, activo) values(?, ?, ?, ?, ?, ?);";
+        
+        String id_c = "select cliente_id from clientes where nombre = '"+cliente.getSelectedItem().toString()+"';";
+        String id_m = "select id from maquinas where nombre = '"+maquina.getSelectedItem().toString()+"';";
+        
+        java.sql.Statement stc = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rsc = stc.executeQuery(id_c);
+        
+        java.sql.Statement stm= conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rsm = stm.executeQuery(id_m);
+        int num_c = 0;
+        int num_m = 0;
+        while(rsc.next()){
+        num_c = rsc.getInt(1);
+        }
+        while(rsm.next())
+        num_m = rsm.getInt(1);
+        
+         
+
             java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
-            cs.setString(1, getNombre());
-            
-            cs.setBoolean(4, isActivo());
+            cs.setString(1, nombre.getText());
+            cs.setString(2, fecha_i.getText());
+            cs.setString(3, fecha_f.getText());
+            cs.setInt(4, num_c);
+            cs.setInt(5, num_m);
+            cs.setBoolean(6, isActivo());
             cs.execute();
             
             JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);

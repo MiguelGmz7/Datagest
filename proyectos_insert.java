@@ -6,6 +6,7 @@ package com.app;
 
 import java.awt.Color;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
@@ -28,22 +29,6 @@ public class proyectos_insert extends javax.swing.JFrame {
     }
     
     
-    public void setMaquina(int maquina) throws SQLException{
-        this.maquina = maquina;
-        
-        String nombre = null;
-        
-        Cconexion conexion = new Cconexion();
-        String sql = "select nombre from maquinas where id = "+maquina+";";
-        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
-        java.sql.ResultSet rs = st.executeQuery(sql);
-        
-        
-        while(rs.next())
-            nombre = rs.getString("nombre");
-        
-        id.setText(nombre);
-    }
     
     private void setComboMaquinas() throws SQLException{
         Cconexion conexion = new Cconexion();
@@ -110,7 +95,7 @@ public class proyectos_insert extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         id = new javax.swing.JLabel();
         label_c1 = new javax.swing.JLabel();
-        proporcion = new javax.swing.JTextField();
+        Nombre = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         label_c4 = new javax.swing.JLabel();
         Act_rb = new javax.swing.JRadioButton();
@@ -123,10 +108,10 @@ public class proyectos_insert extends javax.swing.JFrame {
         Clientes = new javax.swing.JComboBox<>();
         label_c2 = new javax.swing.JLabel();
         label_c3 = new javax.swing.JLabel();
-        proporcion1 = new javax.swing.JTextField();
+        Fechai = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         label_c5 = new javax.swing.JLabel();
-        proporcion2 = new javax.swing.JTextField();
+        Fechaf = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         label_c6 = new javax.swing.JLabel();
         Maquinas = new javax.swing.JComboBox<>();
@@ -241,11 +226,11 @@ public class proyectos_insert extends javax.swing.JFrame {
         label_c1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_c1.setText("Nombre");
 
-        proporcion.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        proporcion.setBorder(null);
-        proporcion.addActionListener(new java.awt.event.ActionListener() {
+        Nombre.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        Nombre.setBorder(null);
+        Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                proporcionActionPerformed(evt);
+                NombreActionPerformed(evt);
             }
         });
 
@@ -421,11 +406,11 @@ public class proyectos_insert extends javax.swing.JFrame {
         label_c3.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_c3.setText("Fecha inicial");
 
-        proporcion1.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        proporcion1.setBorder(null);
-        proporcion1.addActionListener(new java.awt.event.ActionListener() {
+        Fechai.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        Fechai.setBorder(null);
+        Fechai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                proporcion1ActionPerformed(evt);
+                FechaiActionPerformed(evt);
             }
         });
 
@@ -435,11 +420,11 @@ public class proyectos_insert extends javax.swing.JFrame {
         label_c5.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_c5.setText("Fecha final");
 
-        proporcion2.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        proporcion2.setBorder(null);
-        proporcion2.addActionListener(new java.awt.event.ActionListener() {
+        Fechaf.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        Fechaf.setBorder(null);
+        Fechaf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                proporcion2ActionPerformed(evt);
+                FechafActionPerformed(evt);
             }
         });
 
@@ -468,11 +453,11 @@ public class proyectos_insert extends javax.swing.JFrame {
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(label_c1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator2)
-                            .addComponent(proporcion, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(10, 10, 10)
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(label_c3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(proporcion1)
+                            .addComponent(Fechai)
                             .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FondoLayout.createSequentialGroup()
@@ -482,7 +467,7 @@ public class proyectos_insert extends javax.swing.JFrame {
                                     .addComponent(jSeparator4)))
                             .addGroup(FondoLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(proporcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(Fechaf, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
                         .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(102, 102, 102)))
@@ -511,7 +496,7 @@ public class proyectos_insert extends javax.swing.JFrame {
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FondoLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(proporcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(FondoLayout.createSequentialGroup()
@@ -519,7 +504,7 @@ public class proyectos_insert extends javax.swing.JFrame {
                             .addComponent(label_c3)
                             .addComponent(label_c1))
                         .addGap(3, 3, 3)
-                        .addComponent(proporcion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Fechai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(FondoLayout.createSequentialGroup()
@@ -540,7 +525,7 @@ public class proyectos_insert extends javax.swing.JFrame {
                                     .addGap(31, 31, 31)
                                     .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(Clientes, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(proporcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(Fechaf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(3, 3, 3)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
@@ -564,22 +549,22 @@ public class proyectos_insert extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void proporcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proporcionActionPerformed
+    private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_proporcionActionPerformed
+    }//GEN-LAST:event_NombreActionPerformed
 
     private void Act_rbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Act_rbActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Act_rbActionPerformed
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-
+        
         try {
-            new Cmaquinas().insumoInsertart(maquina, Clientes, proporcion, Act_rb);
-            setVisible(false);
-        } catch (SQLException ex) {
+            new Cproyectos().InsertarProyecto(Nombre, Fechai, Fechaf, Clientes, Maquinas, Act_rb);
+        } catch (ParseException ex) {
             Logger.getLogger(proyectos_insert.class.getName()).log(Level.SEVERE, null, ex);
         }
+        setVisible(false);
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
@@ -674,17 +659,17 @@ public class proyectos_insert extends javax.swing.JFrame {
 
     private void reset_btmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseClicked
         //Nombre_field.setText(null);
-        proporcion.setText(null);
+        Nombre.setText(null);
         Act_rb.setSelected(false);
     }//GEN-LAST:event_reset_btmMouseClicked
 
-    private void proporcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proporcion1ActionPerformed
+    private void FechaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_proporcion1ActionPerformed
+    }//GEN-LAST:event_FechaiActionPerformed
 
-    private void proporcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proporcion2ActionPerformed
+    private void FechafActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechafActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_proporcion2ActionPerformed
+    }//GEN-LAST:event_FechafActionPerformed
 
     private void MaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaquinasActionPerformed
         // TODO add your handling code here:
@@ -747,8 +732,11 @@ public class proyectos_insert extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Act_rb;
     private javax.swing.JComboBox<String> Clientes;
+    private javax.swing.JTextField Fechaf;
+    private javax.swing.JTextField Fechai;
     private javax.swing.JPanel Fondo;
     private javax.swing.JComboBox<String> Maquinas;
+    private javax.swing.JTextField Nombre;
     private javax.swing.JLabel exit_label;
     private javax.swing.JPanel exit_panel;
     private javax.swing.JLabel id;
@@ -767,9 +755,6 @@ public class proyectos_insert extends javax.swing.JFrame {
     private javax.swing.JPanel panel_login;
     private javax.swing.JPanel panel_reset;
     private javax.swing.JPanel panel_reset1;
-    private javax.swing.JTextField proporcion;
-    private javax.swing.JTextField proporcion1;
-    private javax.swing.JTextField proporcion2;
     private javax.swing.JLabel reset_btm;
     private javax.swing.JLabel reset_btm3;
     private javax.swing.JPanel selector;
