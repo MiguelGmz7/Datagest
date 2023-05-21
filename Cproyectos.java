@@ -186,21 +186,23 @@ public class Cproyectos {
         }
     }
     
-    public void BuscarProvedor(JTable para_clientes, JComboBox campo, JTextField busqueda) {
+    public void BuscarProyecto(JTable para_clientes, JComboBox campo, JTextField busqueda) {
         String bsq = busqueda.getText();
         String cam = campo.getSelectedItem().toString();
         
         Cconexion conexion = new Cconexion();
         DefaultTableModel modelo = new DefaultTableModel();
-        String sql = "select * from provedores where "+cam+" = '"+bsq+"';";
+        String sql = "select * from vista_proyectos where "+cam+" = '"+bsq+"';";
         
         modelo.addColumn("ID");
         modelo.addColumn("Nombre");
-        modelo.addColumn("Email");
-        modelo.addColumn("Telefono");
+        modelo.addColumn("Fecha inicial");
+        modelo.addColumn("Fecha final");
+        modelo.addColumn("Cliente");
+        modelo.addColumn("Maquina");
         modelo.addColumn("Activo");
         
-        String[] datos = new String[5];
+        String[] datos = new String[7];
         
         try{
             java.sql.Statement st = conexion.EstablecerConexion().createStatement();
@@ -212,6 +214,8 @@ public class Cproyectos {
                 datos[2] = rs.getString(3);
                 datos[3] = rs.getString(4);
                 datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(7);
                 
                 modelo.addRow(datos);
             }

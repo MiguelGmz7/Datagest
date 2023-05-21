@@ -388,7 +388,7 @@ public class Proyectos extends javax.swing.JFrame {
 
     private void login_btm16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm16MouseClicked
         // TODO add your handling code here:
-        new Cprovedores().BuscarProvedor(Tb_clientes3, Campo_combo3, Registro_field3);
+        new Cproyectos().BuscarProyecto(Tb_clientes3, Campo_combo3, Registro_field3);
         Campo_combo3.setSelectedIndex(0);
         Registro_field3.setText("");
     }//GEN-LAST:event_login_btm16MouseClicked
