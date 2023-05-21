@@ -4,6 +4,10 @@
  */
 package com.app;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author oscar
@@ -336,12 +340,11 @@ public class Proyectos extends javax.swing.JFrame {
     }//GEN-LAST:event_Tb_clientes3MouseClicked
 
     private void login_btm14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseClicked
-        /*try {
-            // TODO add your handling code here:
-            //new Provedores_insert().setVisible(true);
-        //} catch (SQLException ex) {
-            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        try {
+            new proyectos_insert().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Proyectos.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm14MouseClicked
 
     private void login_btm14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm14MouseEntered
