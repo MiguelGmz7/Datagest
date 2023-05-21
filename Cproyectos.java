@@ -168,7 +168,7 @@ public class Cproyectos {
         }
     }
     
-    public void SeleccionarProvedor(JTable Para_clientes, JTextField busqueda, JComboBox campo) {
+    public void SeleccionarProyecto(JTable Para_clientes, JTextField busqueda, JComboBox campo) {
         try {
             int fila = Para_clientes.getSelectedRow();
             int colum = Para_clientes.getSelectedColumn();

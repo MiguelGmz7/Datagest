@@ -26,9 +26,24 @@ public class proyectos_insert extends javax.swing.JFrame {
         
         setComboClientes();
         setComboMaquinas();
+        id.setText(sacarId());
     }
     
-    
+    private String sacarId() throws SQLException{
+        String sql = "select max(id) from proyectos;";
+        String num = null;
+        int val = 0;
+        Cconexion conexion = new Cconexion();
+        
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql);
+        while(rs.next()){
+           val = rs.getInt(1);
+        }
+        val += 1;
+        num = String.valueOf(val);
+        return num;
+    }
     
     private void setComboMaquinas() throws SQLException{
         Cconexion conexion = new Cconexion();
@@ -660,6 +675,10 @@ public class proyectos_insert extends javax.swing.JFrame {
     private void reset_btmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_btmMouseClicked
         //Nombre_field.setText(null);
         Nombre.setText(null);
+        Fechai.setText("");
+        Fechaf.setText("");
+        Clientes.setSelectedIndex(0);
+        Maquinas.setSelectedIndex(0);
         Act_rb.setSelected(false);
     }//GEN-LAST:event_reset_btmMouseClicked
 

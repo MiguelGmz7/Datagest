@@ -202,7 +202,7 @@ public class Proyectos extends javax.swing.JFrame {
         );
 
         Campo_combo3.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "provedor_id", "nombre", "email", "telefono", "activo" }));
+        Campo_combo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "nombre", "fecha_i", "fecha_f", "cliente", "maquina", "activo" }));
         Campo_combo3.setToolTipText("");
         Campo_combo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,12 +327,14 @@ public class Proyectos extends javax.swing.JFrame {
 
     private void Tb_clientes3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes3MouseClicked
         // TODO add your handling code here:
-        new Cprovedores().SeleccionarProvedor(Tb_clientes3, Registro_field3, Campo_combo3);
-       // String id = seleccionarParam(Tb_clientes3, 0);
+        new Cproyectos().SeleccionarProyecto(Tb_clientes3, Registro_field3, Campo_combo3);
+        String id = new Cpersonal().seleccionarParam(Tb_clientes3, 0);
         String mnombre = new Cpersonal().seleccionarParam(Tb_clientes3, 1);
-        String memail = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
-        String mtel = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
-        String mact = new Cpersonal().seleccionarParam(Tb_clientes3, 4);
+        String fecha_i = new Cpersonal().seleccionarParam(Tb_clientes3, 2);
+        String fecha_f = new Cpersonal().seleccionarParam(Tb_clientes3, 3);
+        String cliente = new Cpersonal().seleccionarParam(Tb_clientes3, 4);
+        String maquina = new Cpersonal().seleccionarParam(Tb_clientes3, 5);
+        String activo = new Cpersonal().seleccionarParam(Tb_clientes3, 6);
 
        // mod3.setProvedorMod(id, mnombre, memail, mtel, mact);
 
