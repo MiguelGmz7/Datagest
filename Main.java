@@ -25,7 +25,8 @@ public class Main {
         //new Menu().setVisible(true);
         //new Clientes().setVisible(true);
         //new InsumosAso().setVisible(true);
-        new Proyectos().setVisible(true);
+        new Compras().setVisible(true);
+    //new Proyectos().setVisible(true);
     }
     
 }
