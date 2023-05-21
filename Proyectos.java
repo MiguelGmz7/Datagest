@@ -12,12 +12,14 @@ import java.util.logging.Logger;
  *
  * @author oscar
  */
-public class Proyectos extends javax.swing.JFrame {
+public class Proyectos extends javax.swing.JFrame  {
 
     /**
      * Creates new form Proyectos
+     * @throws java.sql.SQLException
      */
-    public Proyectos() {
+     proyectos_mod mod = new proyectos_mod();
+    public Proyectos() throws SQLException {
         initComponents();
         new Cproyectos().mostrarProyecto(Tb_clientes3);
     }
@@ -337,7 +339,7 @@ public class Proyectos extends javax.swing.JFrame {
         String activo = new Cpersonal().seleccionarParam(Tb_clientes3, 6);
 
        // mod3.setProvedorMod(id, mnombre, memail, mtel, mact);
-
+       mod.setProyecto(id, mnombre, fecha_i, fecha_f, cliente, maquina, activo);
         login_btm17.setEnabled(true);
     }//GEN-LAST:event_Tb_clientes3MouseClicked
 
@@ -415,6 +417,7 @@ public class Proyectos extends javax.swing.JFrame {
 
     private void login_btm17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseClicked
         // TODO add your handling code here:
+        mod.setVisible(true);
     }//GEN-LAST:event_login_btm17MouseClicked
 
     private void login_btm17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm17MouseEntered
@@ -463,7 +466,7 @@ public class Proyectos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Proyectos().setVisible(true);
+                //new Proyectos().setVisible(true);
             }
         });
     }

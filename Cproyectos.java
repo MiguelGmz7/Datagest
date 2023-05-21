@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
@@ -225,31 +226,38 @@ public class Cproyectos {
         }
     }
     
-    public void modificarProvedor(String prenombre, JTextField nombre, JTextField email, JTextField telefono, JRadioButton activo) throws SQLException {
+    public void modificarProyecto(JLabel id, JTextField nombre, JTextField fechai, JTextField fechaf, JComboBox cliente, JComboBox maquina, JRadioButton activo) throws SQLException {
         try{
-        String sql_id = "select  provedor_id from provedores where nombre = '"+prenombre+"';";
+
         Cconexion conexion = new Cconexion();
         
-        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
-        java.sql.ResultSet rs = st.executeQuery(sql_id);
+        String id_c = "select cliente_id from clientes where nombre = '"+cliente.getSelectedItem().toString()+"';";
+        String id_m = "select id from maquinas where nombre = '"+maquina.getSelectedItem().toString()+"';";
         
-        if(rs.next()){
-            String id = rs.getString("provedor_id");
+        java.sql.Statement stc = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rsc = stc.executeQuery(id_c);
+        
+        java.sql.Statement stm= conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rsm = stm.executeQuery(id_m);
+        int num_c = 0;
+        int num_m = 0;
+        while(rsc.next()){
+        num_c = rsc.getInt(1);
+        }
+        while(rsm.next())
+        num_m = rsm.getInt(1);
             
-            setNombre(nombre.getText());
-            
-            setActivo(activo.isSelected());
-            
-            String update = "update provedores set nombre = ?, email = ?, telefono = ?, activo = ? where provedor_id = "+id+";";
+            String update = "update proyectos set nombre = ?, fecha_i = ?, fecha_f = ?, cliente_id = ?, maquina_id = ?, activo = ? where id = "+Integer.valueOf(id.getText())+";";
         java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
-            cs.setString(1, getNombre());
-            
-            cs.setBoolean(4, isActivo());
+            cs.setString(1, nombre.getText());
+            cs.setString(2, fechai.getText());
+            cs.setString(3, fechaf.getText());
+            cs.setInt(4, num_c);
+            cs.setInt(5, num_m);
+            cs.setBoolean(6, activo.isSelected());
             cs.execute();
         JOptionPane.showMessageDialog(null,"Se Modifico correctamente la información","MODIFICAR",JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(null,"No se puede agregar un registro solo modificar","Error",JOptionPane.ERROR_MESSAGE);
-        }
+        
        
         
 
