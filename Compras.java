@@ -4,6 +4,10 @@
  */
 package com.app;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author oscar
@@ -13,7 +17,7 @@ public class Compras extends javax.swing.JFrame {
     /**
      * Creates new form Compras
      */
-    private boolean material;
+    private boolean material = false;
     public Compras() {
         initComponents();
         new Ccompras().mostrarCompras(Tb_clientes5);
@@ -43,7 +47,7 @@ public class Compras extends javax.swing.JFrame {
         panel_login23 = new javax.swing.JPanel();
         login_btm25 = new javax.swing.JLabel();
         panel_login24 = new javax.swing.JPanel();
-        login_btm26 = new javax.swing.JLabel();
+        Materiales = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,7 +73,7 @@ public class Compras extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 48)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Maquinas");
+        jLabel14.setText("Compras");
 
         panel_login20.setBackground(new java.awt.Color(246, 150, 143));
         panel_login20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -262,22 +266,22 @@ public class Compras extends javax.swing.JFrame {
             }
         });
 
-        login_btm26.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm26.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        login_btm26.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm26.setText("MATERIAL");
-        login_btm26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm26.setEnabled(false);
-        login_btm26.addMouseListener(new java.awt.event.MouseAdapter() {
+        Materiales.setBackground(new java.awt.Color(247, 199, 196));
+        Materiales.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        Materiales.setForeground(new java.awt.Color(249, 249, 249));
+        Materiales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Materiales.setText("MATERIAL");
+        Materiales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Materiales.setEnabled(false);
+        Materiales.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm26MouseClicked(evt);
+                MaterialesMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm26MouseEntered(evt);
+                MaterialesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm26MouseExited(evt);
+                MaterialesMouseExited(evt);
             }
         });
 
@@ -285,13 +289,13 @@ public class Compras extends javax.swing.JFrame {
         panel_login24.setLayout(panel_login24Layout);
         panel_login24Layout.setHorizontalGroup(
             panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(login_btm26, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panel_login24Layout.setVerticalGroup(
             panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login24Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(login_btm26, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -322,7 +326,7 @@ public class Compras extends javax.swing.JFrame {
                         .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_login24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 21, Short.MAX_VALUE))))
+                        .addGap(0, 37, Short.MAX_VALUE))))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -349,9 +353,7 @@ public class Compras extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,18 +406,18 @@ public class Compras extends javax.swing.JFrame {
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
         // TODO add your handling code here:
-        /*
+        
         if (material == false)
-        {
+        { 
             try {
-                new Maquinas_insert().setVisible(true);
+                new compras_insert().setVisible(true);
             } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            materiales.setVisible(true);
+            Materiales.setVisible(true);
         }
-        */
+        
     }//GEN-LAST:event_login_btm22MouseClicked
 
     private void login_btm22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseEntered
@@ -511,22 +513,22 @@ public class Compras extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_login23MouseExited
 
-    private void login_btm26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseClicked
+    private void MaterialesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseClicked
         // TODO add your handling code here:
         //materiales.setVisible(true);
         /*
         est.mostrarInsumo(Tb_clientes5);
         material = true;
         */
-    }//GEN-LAST:event_login_btm26MouseClicked
+    }//GEN-LAST:event_MaterialesMouseClicked
 
-    private void login_btm26MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseEntered
+    private void MaterialesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm26MouseEntered
+    }//GEN-LAST:event_MaterialesMouseEntered
 
-    private void login_btm26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm26MouseExited
+    private void MaterialesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm26MouseExited
+    }//GEN-LAST:event_MaterialesMouseExited
 
     private void panel_login24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseEntered
         // TODO add your handling code here:
@@ -573,6 +575,7 @@ public class Compras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Campo_combo5;
+    private javax.swing.JLabel Materiales;
     private javax.swing.JTextField Registro_field5;
     private javax.swing.JTable Tb_clientes5;
     private javax.swing.JLabel jLabel14;
@@ -582,7 +585,6 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JLabel login_btm23;
     private javax.swing.JLabel login_btm24;
     private javax.swing.JLabel login_btm25;
-    private javax.swing.JLabel login_btm26;
     private javax.swing.JPanel panel_login20;
     private javax.swing.JPanel panel_login21;
     private javax.swing.JPanel panel_login22;
