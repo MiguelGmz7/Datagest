@@ -438,7 +438,7 @@ public class Compras extends javax.swing.JFrame {
 
     private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
         // TODO add your handling code here:
-        new Cmaquinas().mostrarMaquinas(Tb_clientes5);
+        new Ccompras().mostrarCompras(Tb_clientes5);
         material = false;
     }//GEN-LAST:event_login_btm23MouseClicked
 

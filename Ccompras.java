@@ -4,6 +4,7 @@
  */
 package com.app;
 
+import java.beans.Statement;
 import java.sql.SQLException;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -177,23 +178,22 @@ public class Ccompras {
         }
     }
     
-    public void insertartMaquina(JTextField nombre, JTextField proporcion, JRadioButton activo) {
-        
-        setNombre(nombre.getText());
-        setProporcion(proporcion.getText());
-        setActivo(activo.isSelected());
+    public void insertarCompra(JTextField fecha, JComboBox provedor) {
         
         Cconexion conexion = new Cconexion();
-        
-        String sql = "insert into maquinas (nombre, proporcion, activo) values(?, ?, ?);";
-        
         try{
-            java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
-            cs.setString(1, getNombre());
-            cs.setString(2, getProporcion());;
-            cs.setBoolean(3, isActivo());
-            cs.execute();
             
+        String id_p = "select provedor_id from provedores where nombre = '"+provedor.getSelectedItem().toString()+"';";
+        java.sql.Statement stp = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rsp = stp.executeQuery(id_p);
+        int num_p = 0;
+        while(rsp.next()){
+        num_p = rsp.getInt(1);
+        }
+            
+        String sql = "insert into compras (fecha, provedor) values('"+fecha.getText()+"','"+num_p+"');";
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        st.execute(sql);
             JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
