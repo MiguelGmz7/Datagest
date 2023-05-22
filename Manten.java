@@ -408,18 +408,13 @@ public class Manten extends javax.swing.JFrame {
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
-        // TODO add your handling code here:
-        
-        if (material == false)
-        { 
             try {
-                new compras_insert().setVisible(true);
+                // TODO add your handling code here:
+
+                new manten_ins().setVisible(true);
             } catch (SQLException ex) {
                 Logger.getLogger(Manten.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {
-         //  ins.setVisible(true);
-        }
         
     }//GEN-LAST:event_login_btm22MouseClicked
 
