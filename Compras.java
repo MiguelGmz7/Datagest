@@ -6,6 +6,7 @@ package com.app;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,14 +17,16 @@ import java.util.logging.Logger;
 public class Compras extends javax.swing.JFrame {
 
     compras_mod mod;
-    Ccompras ins;
+    compras_ins_plus ins;
+    Ccompras view;
 /**
      * Creates new form Compras
      */
         private boolean material = false;
     public Compras() throws SQLException {
         this.mod = new compras_mod();
-        this.ins = new Ccompras();
+        this.ins = new compras_ins_plus();
+        this.view = new Ccompras();
         initComponents();
         new Ccompras().mostrarCompras(Tb_clientes5);
     }
@@ -382,7 +385,9 @@ public class Compras extends javax.swing.JFrame {
                 
                 
                 mod.setCompra(idm, fecham, provedorm);
-                ins.setId(Integer.parseInt(idm));
+                ins.setId(idm);
+                view.setId(Integer.parseInt(idm));
+                
                 Modificar.setEnabled(true);
                 Materiales.setEnabled(true);
                 material = true;
@@ -433,7 +438,7 @@ public class Compras extends javax.swing.JFrame {
                 Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            Materiales.setVisible(true);
+           ins.setVisible(true);
         }
         
     }//GEN-LAST:event_login_btm22MouseClicked
@@ -533,7 +538,7 @@ public class Compras extends javax.swing.JFrame {
 
     private void MaterialesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseClicked
         // TODO add your handling code here:
-        ins.mostrarInsumo(Tb_clientes5);
+        view.mostrarInsumo(Tb_clientes5);
         material = true;
     }//GEN-LAST:event_MaterialesMouseClicked
 

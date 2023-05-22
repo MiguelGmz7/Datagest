@@ -93,7 +93,7 @@ public class Ccompras {
         }
     }
     
-    public void insumoInsertart(int maquina, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
+    public void insumoInsertar(JLabel compra, JComboBox material, JTextField cantidad) throws SQLException{
         Cconexion conexion = new Cconexion();
         try{
         String id_insumo = "select material_id from insumos_en_stock where nombre = '"+material.getSelectedItem().toString()+"';";
@@ -102,14 +102,13 @@ public class Ccompras {
         int num = 0;
         while(rs.next())
         num = rs.getInt(1);
-        String sql = "insert into maquina_insumos(maquina, insumo, cantidad, activo) values(?,?,?,?);";
+        String sql = "insert into compra_materiales(compra, material, cantidad) values(?,?,?);";
         
         
             java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(sql);
-            cs.setInt(1, maquina);
+            cs.setInt(1, Integer.parseInt(compra.getText()));
             cs.setInt(2, num);
             cs.setInt(3, Integer.parseInt(cantidad.getText()));
-            cs.setBoolean(4, activo.isSelected());
             cs.execute();
             
             JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
