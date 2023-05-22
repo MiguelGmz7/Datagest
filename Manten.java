@@ -22,6 +22,7 @@ public class Manten extends javax.swing.JFrame {
      * Creates new form Compras
      */
         private boolean material = false;
+        manten_mod mod = new manten_mod();
     public Manten() throws SQLException {
         initComponents();
         new Cmanten().mostrarManten(Tb_clientes5);
@@ -50,8 +51,6 @@ public class Manten extends javax.swing.JFrame {
         Registro_field5 = new javax.swing.JTextField();
         panel_login23 = new javax.swing.JPanel();
         Modificar = new javax.swing.JLabel();
-        panel_login24 = new javax.swing.JPanel();
-        Materiales = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -260,48 +259,6 @@ public class Manten extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panel_login24.setBackground(new java.awt.Color(246, 150, 143));
-        panel_login24.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                panel_login24MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                panel_login24MouseExited(evt);
-            }
-        });
-
-        Materiales.setBackground(new java.awt.Color(247, 199, 196));
-        Materiales.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        Materiales.setForeground(new java.awt.Color(249, 249, 249));
-        Materiales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Materiales.setText("NOTA");
-        Materiales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Materiales.setEnabled(false);
-        Materiales.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MaterialesMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MaterialesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MaterialesMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_login24Layout = new javax.swing.GroupLayout(panel_login24);
-        panel_login24.setLayout(panel_login24Layout);
-        panel_login24Layout.setHorizontalGroup(
-            panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        panel_login24Layout.setVerticalGroup(
-            panel_login24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_login24Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -309,9 +266,6 @@ public class Manten extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jScrollPane6)
-                        .addContainerGap())
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(Campo_combo5, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,9 +282,10 @@ public class Manten extends javax.swing.JFrame {
                         .addComponent(panel_login23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panel_login24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
+                        .addGap(132, 132, 132))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,8 +296,7 @@ public class Manten extends javax.swing.JFrame {
                     .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(panel_login23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(panel_login20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(panel_login24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panel_login22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -357,7 +311,9 @@ public class Manten extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,13 +337,12 @@ public class Manten extends javax.swing.JFrame {
                 String fecha_f = new Menu().seleccionarParam(Tb_clientes5, 3);
                 String personal = new Menu().seleccionarParam(Tb_clientes5, 4);
                 
-                
+                mod.setMod(idm, proyecto, fecha_i, fecha_f, personal);
             //    mod.setCompra(idm, fecham, provedorm);
               //  ins.setId(idm);
                 //view.setId(Integer.parseInt(idm));
                 
                 Modificar.setEnabled(true);
-                Materiales.setEnabled(true);
                 
                 
             } catch (SQLException ex) {
@@ -474,6 +429,7 @@ public class Manten extends javax.swing.JFrame {
 
     private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
         // TODO add your handling code here:
+        mod.setVisible(true);
         /*
         if(material == false){
             mod.setVisible(true);
@@ -499,28 +455,6 @@ public class Manten extends javax.swing.JFrame {
     private void panel_login23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_login23MouseExited
-
-    private void MaterialesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseClicked
-        // TODO add your handling code here:
-       // view.mostrarInsumo(Tb_clientes5);
-        material = true;
-    }//GEN-LAST:event_MaterialesMouseClicked
-
-    private void MaterialesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MaterialesMouseEntered
-
-    private void MaterialesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MaterialesMouseExited
-
-    private void panel_login24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login24MouseEntered
-
-    private void panel_login24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login24MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panel_login24MouseExited
 
     /**
      * @param args the command line arguments
@@ -564,7 +498,6 @@ public class Manten extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Campo_combo5;
-    private javax.swing.JLabel Materiales;
     private javax.swing.JLabel Modificar;
     private javax.swing.JTextField Registro_field5;
     private javax.swing.JTable Tb_clientes5;
@@ -578,6 +511,5 @@ public class Manten extends javax.swing.JFrame {
     private javax.swing.JPanel panel_login21;
     private javax.swing.JPanel panel_login22;
     private javax.swing.JPanel panel_login23;
-    private javax.swing.JPanel panel_login24;
     // End of variables declaration//GEN-END:variables
 }

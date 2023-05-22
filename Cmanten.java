@@ -215,7 +215,7 @@ public class Cmanten {
         }
     }
     
-    public void insertarManten(JComboBox proyecto, JTextField fi, JTextField ff, JComboBox personal, JTextArea obv) {
+    public void insertarManten(JComboBox proyecto, JTextField fi, JTextField ff, JComboBox personal) {
         
         Cconexion conexion = new Cconexion();
         try{
@@ -235,7 +235,7 @@ public class Cmanten {
            num_per =  rsper.getInt(1);
         }
             
-        String sql = "insert into mantenimientos (proyecto, fecha_i, obv, fecha_f, personal) values("+num_pro+",'"+fi.getText()+"','"+obv.getText()+"','"+ff.getText()+"',"+num_per+");";
+        String sql = "insert into mantenimientos (proyecto, fecha_i, fecha_f, personal) values("+num_pro+",'"+fi.getText()+"', '"+ff.getText()+"',"+num_per+");";
         java.sql.Statement st = conexion.EstablecerConexion().createStatement();
         st.execute(sql);
             JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
@@ -262,20 +262,27 @@ public class Cmanten {
         }
     }
     
-    public void modificarCompra(JLabel id, JTextField fecha, JComboBox provedores){
+    public void modificarManten(JLabel id, JComboBox proyecto, JTextField fecha_i, JTextField fecha_f, JComboBox personal){
         Cconexion conexion = new Cconexion();
         
-        int idp = 0;
+        int idpro = 0;
+        int idper = 0;
         
         try{
-        String sql_id = "select provedor_id from provedores where nombre = '"+provedores.getSelectedItem()+"';";
-        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
-        java.sql.ResultSet rs = st.executeQuery(sql_id);
+        String sql_pro = "select id from proyectos where nombre = '"+proyecto.getSelectedItem()+"';";
+        String sql_per = "select personal_id from personal where apellidos = '"+personal.getSelectedItem()+"';";
+        java.sql.Statement stpro = conexion.EstablecerConexion().createStatement();
+        java.sql.Statement stper = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rspro = stpro.executeQuery(sql_pro);
+        java.sql.ResultSet rsper = stper.executeQuery(sql_per);
         
-        while(rs.next())
-        idp = rs.getInt(1);
-            
-        String update = "update compras set fecha = '"+fecha.getText()+"', provedor = "+idp+" where id = "+id.getText()+";";
+        while(rspro.next())
+        idpro = rspro.getInt(1);
+        
+        while(rsper.next())
+        idper = rsper.getInt(1);
+        
+        String update = "update mantenimientos set proyecto = "+idpro+", fecha_i = '"+fecha_i.getText()+"', fecha_f = '"+fecha_f.getText()+"', personal = "+idper+" where id = "+id.getText()+";";
         java.sql.Statement stm = conexion.EstablecerConexion().createStatement();
         stm.execute(update); 
         
