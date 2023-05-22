@@ -260,14 +260,14 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 40, 460, 40));
+        Fondo.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 760, 40));
 
         Display_tab.setBackground(new java.awt.Color(255, 255, 255, 0));
 
@@ -2226,7 +2226,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_exit_labelMouseExited
 
     private void exit_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseClicked
-        System.exit(0);
+        setVisible(false);
     }//GEN-LAST:event_exit_labelMouseClicked
 
     private void Usario_fieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usario_fieldMouseClicked

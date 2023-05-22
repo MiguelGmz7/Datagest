@@ -411,7 +411,7 @@ public class Login extends javax.swing.JFrame {
                 
                 Menu menu = new Menu();
                 menu.setUser(nombre_1, nombre_2, apellidos, puesto, email, telefono, activo);
-                menu.setVisible(true);
+                new Opciones().setVisible(true);
                 
                 //JOptionPane.showMessageDialog(null,"Usuario y Contraseña correctos","happy",JOptionPane.INFORMATION_MESSAGE);
             } else {

@@ -4,6 +4,7 @@
  */
 package com.app;
 
+import java.awt.Color;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
@@ -25,6 +26,8 @@ public class Compras extends javax.swing.JFrame {
      * Creates new form Compras
      */
         private boolean material = false;
+    private int Xmouse;
+    private int Ymouse;
     public Compras() throws SQLException {
         this.mod = new compras_mod();
         this.ins = new compras_ins_plus();
@@ -59,8 +62,12 @@ public class Compras extends javax.swing.JFrame {
         Modificar = new javax.swing.JLabel();
         panel_login24 = new javax.swing.JPanel();
         Materiales = new javax.swing.JLabel();
+        selector = new javax.swing.JPanel();
+        exit_panel = new javax.swing.JPanel();
+        exit_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel16.setBackground(new java.awt.Color(245, 101, 90));
 
@@ -309,6 +316,69 @@ public class Compras extends javax.swing.JFrame {
                 .addComponent(Materiales, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        selector.setOpaque(false);
+        selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                selectorMouseDragged(evt);
+            }
+        });
+        selector.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                selectorMousePressed(evt);
+            }
+        });
+
+        exit_panel.setBackground(new java.awt.Color(27, 27, 27));
+        exit_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_panelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_panelMouseExited(evt);
+            }
+        });
+
+        exit_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        exit_label.setForeground(new java.awt.Color(255, 255, 255));
+        exit_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit_label.setText("X");
+        exit_label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exit_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exit_labelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_labelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_labelMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exit_panelLayout = new javax.swing.GroupLayout(exit_panel);
+        exit_panel.setLayout(exit_panelLayout);
+        exit_panelLayout.setHorizontalGroup(
+            exit_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_label, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        exit_panelLayout.setVerticalGroup(
+            exit_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout selectorLayout = new javax.swing.GroupLayout(selector);
+        selector.setLayout(selectorLayout);
+        selectorLayout.setHorizontalGroup(
+            selectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectorLayout.createSequentialGroup()
+                .addComponent(exit_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        selectorLayout.setVerticalGroup(
+            selectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -337,12 +407,14 @@ public class Compras extends javax.swing.JFrame {
                         .addComponent(panel_login21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_login24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 37, Short.MAX_VALUE))))
+                        .addGap(0, 77, Short.MAX_VALUE))))
+            .addComponent(selector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addComponent(selector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel14)
                     .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -545,6 +617,40 @@ public class Compras extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_login24MouseExited
 
+    private void exit_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseClicked
+        setVisible(false);
+    }//GEN-LAST:event_exit_labelMouseClicked
+
+    private void exit_labelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseEntered
+        exit_panel.setBackground(Color.red);
+    }//GEN-LAST:event_exit_labelMouseEntered
+
+    private void exit_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseExited
+
+        exit_panel.setBackground(Color.decode("#1b1b1b"));
+    }//GEN-LAST:event_exit_labelMouseExited
+
+    private void exit_panelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_panelMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exit_panelMouseEntered
+
+    private void exit_panelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_panelMouseExited
+        exit_panel.setBackground(Color.black);
+    }//GEN-LAST:event_exit_panelMouseExited
+
+    private void selectorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selectorMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+
+        this.setLocation(x - Xmouse, y - Ymouse);
+    }//GEN-LAST:event_selectorMouseDragged
+
+    private void selectorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selectorMousePressed
+        Xmouse = evt.getX();
+        Ymouse = evt.getY();
+
+    }//GEN-LAST:event_selectorMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -590,6 +696,8 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JLabel Modificar;
     private javax.swing.JTextField Registro_field5;
     private javax.swing.JTable Tb_clientes5;
+    private javax.swing.JLabel exit_label;
+    private javax.swing.JPanel exit_panel;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JScrollPane jScrollPane6;
@@ -601,5 +709,6 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JPanel panel_login22;
     private javax.swing.JPanel panel_login23;
     private javax.swing.JPanel panel_login24;
+    private javax.swing.JPanel selector;
     // End of variables declaration//GEN-END:variables
 }

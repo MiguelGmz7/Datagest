@@ -4,6 +4,7 @@
  */
 package com.app;
 
+import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,6 +20,8 @@ public class Proyectos extends javax.swing.JFrame  {
      * @throws java.sql.SQLException
      */
      proyectos_mod mod = new proyectos_mod();
+    private int Ymouse;
+    private int Xmouse;
     public Proyectos() throws SQLException {
         initComponents();
         new Cproyectos().mostrarProyecto(Tb_clientes3);
@@ -33,6 +36,8 @@ public class Proyectos extends javax.swing.JFrame  {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        exit_label = new javax.swing.JLabel();
+        exit_label1 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -48,8 +53,46 @@ public class Proyectos extends javax.swing.JFrame  {
         Registro_field3 = new javax.swing.JTextField();
         panel_login15 = new javax.swing.JPanel();
         login_btm17 = new javax.swing.JLabel();
+        selector1 = new javax.swing.JPanel();
+        exit_panel = new javax.swing.JPanel();
+        exit_label2 = new javax.swing.JLabel();
+
+        exit_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        exit_label.setForeground(new java.awt.Color(255, 255, 255));
+        exit_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit_label.setText("X");
+        exit_label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exit_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exit_labelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_labelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_labelMouseExited(evt);
+            }
+        });
+
+        exit_label1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        exit_label1.setForeground(new java.awt.Color(255, 255, 255));
+        exit_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit_label1.setText("X");
+        exit_label1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exit_label1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exit_label1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_label1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_label1MouseExited(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel11.setBackground(new java.awt.Color(245, 101, 90));
@@ -259,6 +302,69 @@ public class Proyectos extends javax.swing.JFrame  {
                 .addComponent(login_btm17, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        selector1.setOpaque(false);
+        selector1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                selector1MouseDragged(evt);
+            }
+        });
+        selector1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                selector1MousePressed(evt);
+            }
+        });
+
+        exit_panel.setBackground(new java.awt.Color(27, 27, 27));
+        exit_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_panelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_panelMouseExited(evt);
+            }
+        });
+
+        exit_label2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        exit_label2.setForeground(new java.awt.Color(255, 255, 255));
+        exit_label2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit_label2.setText("X");
+        exit_label2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exit_label2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exit_label2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exit_label2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exit_label2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exit_panelLayout = new javax.swing.GroupLayout(exit_panel);
+        exit_panel.setLayout(exit_panelLayout);
+        exit_panelLayout.setHorizontalGroup(
+            exit_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        exit_panelLayout.setVerticalGroup(
+            exit_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_label2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout selector1Layout = new javax.swing.GroupLayout(selector1);
+        selector1.setLayout(selector1Layout);
+        selector1Layout.setHorizontalGroup(
+            selector1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selector1Layout.createSequentialGroup()
+                .addComponent(exit_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        selector1Layout.setVerticalGroup(
+            selector1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exit_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -280,7 +386,7 @@ public class Proyectos extends javax.swing.JFrame  {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(15, Short.MAX_VALUE))
+                                .addContainerGap(65, Short.MAX_VALUE))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addComponent(Campo_combo3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -288,11 +394,13 @@ public class Proyectos extends javax.swing.JFrame  {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(panel_login14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(128, 128, 128))))))
+            .addComponent(selector1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addComponent(selector1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel11)
                     .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -436,6 +544,65 @@ public class Proyectos extends javax.swing.JFrame  {
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_login15MouseExited
 
+    private void exit_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exit_labelMouseClicked
+
+    private void exit_labelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseEntered
+        exit_panel.setBackground(Color.red);
+    }//GEN-LAST:event_exit_labelMouseEntered
+
+    private void exit_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_labelMouseExited
+
+        exit_panel.setBackground(Color.decode("#1b1b1b"));
+    }//GEN-LAST:event_exit_labelMouseExited
+
+    private void exit_label1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exit_label1MouseClicked
+
+    private void exit_label1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label1MouseEntered
+        exit_panel.setBackground(Color.red);
+    }//GEN-LAST:event_exit_label1MouseEntered
+
+    private void exit_label1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label1MouseExited
+
+        exit_panel.setBackground(Color.decode("#1b1b1b"));
+    }//GEN-LAST:event_exit_label1MouseExited
+
+    private void exit_label2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label2MouseClicked
+        setVisible(false);
+    }//GEN-LAST:event_exit_label2MouseClicked
+
+    private void exit_label2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label2MouseEntered
+        exit_panel.setBackground(Color.red);
+    }//GEN-LAST:event_exit_label2MouseEntered
+
+    private void exit_label2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_label2MouseExited
+
+        exit_panel.setBackground(Color.decode("#1b1b1b"));
+    }//GEN-LAST:event_exit_label2MouseExited
+
+    private void exit_panelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_panelMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exit_panelMouseEntered
+
+    private void exit_panelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_panelMouseExited
+        exit_panel.setBackground(Color.black);
+    }//GEN-LAST:event_exit_panelMouseExited
+
+    private void selector1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selector1MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+
+        this.setLocation(x - Xmouse, y - Ymouse);
+    }//GEN-LAST:event_selector1MouseDragged
+
+    private void selector1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selector1MousePressed
+        Xmouse = evt.getX();
+        Ymouse = evt.getY();
+    }//GEN-LAST:event_selector1MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -475,6 +642,10 @@ public class Proyectos extends javax.swing.JFrame  {
     private javax.swing.JComboBox<String> Campo_combo3;
     private javax.swing.JTextField Registro_field3;
     private javax.swing.JTable Tb_clientes3;
+    private javax.swing.JLabel exit_label;
+    private javax.swing.JLabel exit_label1;
+    private javax.swing.JLabel exit_label2;
+    private javax.swing.JPanel exit_panel;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel9;
@@ -487,5 +658,6 @@ public class Proyectos extends javax.swing.JFrame  {
     private javax.swing.JPanel panel_login13;
     private javax.swing.JPanel panel_login14;
     private javax.swing.JPanel panel_login15;
+    private javax.swing.JPanel selector1;
     // End of variables declaration//GEN-END:variables
 }

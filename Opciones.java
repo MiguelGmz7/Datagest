@@ -40,6 +40,12 @@ public class Opciones extends javax.swing.JFrame {
         selector = new javax.swing.JPanel();
         exit_panel = new javax.swing.JPanel();
         exit_label = new javax.swing.JLabel();
+        panel_login1 = new javax.swing.JPanel();
+        login_btm3 = new javax.swing.JLabel();
+        panel_login2 = new javax.swing.JPanel();
+        login_btm4 = new javax.swing.JLabel();
+        panel_login3 = new javax.swing.JPanel();
+        login_btm5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -63,7 +69,7 @@ public class Opciones extends javax.swing.JFrame {
         login_btm2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         login_btm2.setForeground(new java.awt.Color(249, 249, 249));
         login_btm2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm2.setText("ADMINISTRACION");
+        login_btm2.setText("MANTENIMIENTOS");
         login_btm2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         login_btm2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -88,7 +94,7 @@ public class Opciones extends javax.swing.JFrame {
             .addComponent(login_btm2, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        fondo.add(panel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 130, 70));
+        fondo.add(panel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 130, 70));
 
         selector.setOpaque(false);
         selector.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -155,6 +161,129 @@ public class Opciones extends javax.swing.JFrame {
 
         fondo.add(selector, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
 
+        panel_login1.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login1MouseExited(evt);
+            }
+        });
+
+        login_btm3.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        login_btm3.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm3.setText("COMPRAS");
+        login_btm3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login1Layout = new javax.swing.GroupLayout(panel_login1);
+        panel_login1.setLayout(panel_login1Layout);
+        panel_login1Layout.setHorizontalGroup(
+            panel_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm3, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        panel_login1Layout.setVerticalGroup(
+            panel_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm3, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+        );
+
+        fondo.add(panel_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        panel_login2.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login2MouseExited(evt);
+            }
+        });
+
+        login_btm4.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        login_btm4.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm4.setText("PROYECTOS");
+        login_btm4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm4MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login2Layout = new javax.swing.GroupLayout(panel_login2);
+        panel_login2.setLayout(panel_login2Layout);
+        panel_login2Layout.setHorizontalGroup(
+            panel_login2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        panel_login2Layout.setVerticalGroup(
+            panel_login2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+        );
+
+        fondo.add(panel_login2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, -1, -1));
+
+        panel_login3.setBackground(new java.awt.Color(246, 150, 143));
+        panel_login3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_login3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_login3MouseExited(evt);
+            }
+        });
+
+        login_btm5.setBackground(new java.awt.Color(247, 199, 196));
+        login_btm5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        login_btm5.setForeground(new java.awt.Color(249, 249, 249));
+        login_btm5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_btm5.setText("MENU");
+        login_btm5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login_btm5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btm5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                login_btm5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                login_btm5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_login3Layout = new javax.swing.GroupLayout(panel_login3);
+        panel_login3.setLayout(panel_login3Layout);
+        panel_login3Layout.setHorizontalGroup(
+            panel_login3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        panel_login3Layout.setVerticalGroup(
+            panel_login3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(login_btm5, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+        );
+
+        fondo.add(panel_login3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 130, 70));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -208,7 +337,11 @@ public class Opciones extends javax.swing.JFrame {
     }//GEN-LAST:event_panel_loginMouseExited
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
-        
+        try {
+            new Manten().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_login_btm2MouseClicked
 
     private void login_btm2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseEntered
@@ -222,6 +355,82 @@ public class Opciones extends javax.swing.JFrame {
     private void exit_panelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_panelMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_exit_panelMouseEntered
+
+    private void login_btm3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseClicked
+        try {
+            // TODO add your handling code here:
+            new Compras().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm3MouseClicked
+
+    private void login_btm3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm3MouseEntered
+
+    private void login_btm3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm3MouseExited
+
+    private void panel_login1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login1MouseEntered
+
+    private void panel_login1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login1MouseExited
+
+    private void login_btm4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseClicked
+        try {
+            // TODO add your handling code here:
+            new Proyectos().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_login_btm4MouseClicked
+
+    private void login_btm4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm4MouseEntered
+
+    private void login_btm4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm4MouseExited
+
+    private void panel_login2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login2MouseEntered
+
+    private void panel_login2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login2MouseExited
+
+    private void login_btm5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseClicked
+        try {
+            // TODO add your handling code here:
+            new Menu().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_login_btm5MouseClicked
+
+    private void login_btm5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm5MouseEntered
+
+    private void login_btm5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login_btm5MouseExited
+
+    private void panel_login3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login3MouseEntered
+
+    private void panel_login3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_login3MouseExited
 
     /**
      * @param args the command line arguments
@@ -265,7 +474,13 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JPanel exit_panel;
     private javax.swing.JPanel fondo;
     private javax.swing.JLabel login_btm2;
+    private javax.swing.JLabel login_btm3;
+    private javax.swing.JLabel login_btm4;
+    private javax.swing.JLabel login_btm5;
     private javax.swing.JPanel panel_login;
+    private javax.swing.JPanel panel_login1;
+    private javax.swing.JPanel panel_login2;
+    private javax.swing.JPanel panel_login3;
     private javax.swing.JPanel selector;
     // End of variables declaration//GEN-END:variables
 }

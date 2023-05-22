@@ -21,12 +21,13 @@ public class Main {
         
         //System.out.println(mensaje);
         
-        //new Login().setVisible(true);
+        new Login().setVisible(true);
         //new Menu().setVisible(true);
+        //new Opciones().setVisible(true);
         //new Clientes().setVisible(true);
         //new InsumosAso().setVisible(true);
         //new Compras().setVisible(true);
-    new Manten().setVisible(true);
+    //new Manten().setVisible(true);
     //new Proyectos().setVisible(true);
     }
     
