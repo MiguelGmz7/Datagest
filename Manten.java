@@ -207,7 +207,7 @@ public class Manten extends javax.swing.JFrame {
         );
 
         Campo_combo5.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "fecha", "provedor", "materiales" }));
+        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "proyecto", "fecha_i", "fecha_f", "personal" }));
         Campo_combo5.setToolTipText("");
         Campo_combo5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -370,14 +370,16 @@ public class Manten extends javax.swing.JFrame {
     private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
         // TODO add your handling code here:
         
-        if(material == false){
+        
             try {
                 //Cmaquinas maquinas = new Cmaquinas();
                 new Ccompras().seleccionarCompra(Tb_clientes5, Registro_field5, Campo_combo5);
                 
                 String idm = new Menu().seleccionarParam(Tb_clientes5, 0);
-                String fecham = new Menu().seleccionarParam(Tb_clientes5, 1);
-                String provedorm = new Menu().seleccionarParam(Tb_clientes5, 2);
+                String proyecto = new Menu().seleccionarParam(Tb_clientes5, 1);
+                String fecha_i = new Menu().seleccionarParam(Tb_clientes5, 2);
+                String fecha_f = new Menu().seleccionarParam(Tb_clientes5, 3);
+                String personal = new Menu().seleccionarParam(Tb_clientes5, 4);
                 
                 
             //    mod.setCompra(idm, fecham, provedorm);
@@ -391,19 +393,7 @@ public class Manten extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(Manten.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {
-            try {
-                new Ccompras().seleccionarCompra(Tb_clientes5, Registro_field5, Campo_combo5);
-                String idm = new Menu().seleccionarParam(Tb_clientes5, 0);
-                String materialm = new Menu().seleccionarParam(Tb_clientes5, 1);
-                String cantidadm = new Menu().seleccionarParam(Tb_clientes5, 2);
-                
-              //  modp.setMod(idm, materialm, cantidadm);
-                
-            } catch (SQLException ex) {
-                Logger.getLogger(Manten.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        
             
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
@@ -436,8 +426,7 @@ public class Manten extends javax.swing.JFrame {
 
     private void login_btm23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseClicked
         // TODO add your handling code here:
-        new Ccompras().mostrarCompras(Tb_clientes5);
-        material = false;
+        new Cmanten().mostrarManten(Tb_clientes5);
     }//GEN-LAST:event_login_btm23MouseClicked
 
     private void login_btm23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm23MouseEntered
@@ -458,7 +447,7 @@ public class Manten extends javax.swing.JFrame {
 
     private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
         // TODO add your handling code here:
-        new Ccompras().buscarCompra(Tb_clientes5, Campo_combo5, Registro_field5);
+        new Cmanten().buscarManten(Tb_clientes5, Campo_combo5, Registro_field5);
         Registro_field5.setText("");
         Campo_combo5.setSelectedIndex(0);
     }//GEN-LAST:event_login_btm24MouseClicked

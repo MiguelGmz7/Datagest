@@ -215,20 +215,27 @@ public class Cmanten {
         }
     }
     
-    public void insertarCompra(JTextField fecha, JComboBox provedor) {
+    public void insertarManten(JComboBox proyecto, JTextField fi, JTextField ff, JComboBox personal, JTextArea obv) {
         
         Cconexion conexion = new Cconexion();
         try{
             
-        String id_p = "select provedor_id from provedores where nombre = '"+provedor.getSelectedItem().toString()+"';";
-        java.sql.Statement stp = conexion.EstablecerConexion().createStatement();
-        java.sql.ResultSet rsp = stp.executeQuery(id_p);
-        int num_p = 0;
-        while(rsp.next()){
-        num_p = rsp.getInt(1);
+        String id_pro = "select id from proyectos where nombre = '"+proyecto.getSelectedItem()+"';";
+        String id_per = "select personal_id from personal where apellidos = '"+personal.getSelectedItem()+"';";
+        java.sql.Statement stpro = conexion.EstablecerConexion().createStatement();
+        java.sql.Statement stper = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rspro = stpro.executeQuery(id_pro);
+        java.sql.ResultSet rsper = stper.executeQuery(id_per);
+        int num_pro = 0;
+        int num_per = 0;
+        while(rspro.next()){
+        num_pro = rspro.getInt(1);
+        }
+        while(rsper.next()){
+           num_per =  rsper.getInt(1);
         }
             
-        String sql = "insert into compras (fecha, provedor) values('"+fecha.getText()+"','"+num_p+"');";
+        String sql = "insert into mantenimientos (proyecto, fecha_i, obv, fecha_f, personal) values("+num_pro+",'"+fi.getText()+"','"+obv.getText()+"','"+ff.getText()+"',"+num_per+");";
         java.sql.Statement st = conexion.EstablecerConexion().createStatement();
         st.execute(sql);
             JOptionPane.showMessageDialog(null,"Se ingreso correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);
@@ -280,20 +287,21 @@ public class Cmanten {
         }
     }
     
-    public void buscarCompra(JTable para_clientes, JComboBox campo, JTextField busqueda) {
+    public void buscarManten(JTable para_clientes, JComboBox campo, JTextField busqueda) {
         String bsq = busqueda.getText();
         String cam = campo.getSelectedItem().toString();
         
         Cconexion conexion = new Cconexion();
         DefaultTableModel modelo = new DefaultTableModel();
-        String sql = "select * from vista_compras where "+cam+" = '"+bsq+"';";
+        String sql = "select * from vista_mantenimientos where "+cam+" = '"+bsq+"';";
         
         modelo.addColumn("ID");
-        modelo.addColumn("Fecha");
-        modelo.addColumn("Proveedor");
-        modelo.addColumn("Materiales");
+        modelo.addColumn("Proyecto");
+        modelo.addColumn("Fecha inicial");
+        modelo.addColumn("Fecha final");
+        modelo.addColumn("Personal");
         
-        String[] datos = new String[4];
+        String[] datos = new String[5];
         
         try{
             java.sql.Statement st = conexion.EstablecerConexion().createStatement();
@@ -304,6 +312,7 @@ public class Cmanten {
                 datos[1] = rs.getString(2);
                 datos[2] = rs.getString(3);
                 datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
                 
                 modelo.addRow(datos);
             }

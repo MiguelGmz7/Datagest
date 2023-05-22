@@ -94,7 +94,7 @@ public class manten_ins extends javax.swing.JFrame {
         Personal.setModel(modelo);
     }
     
-    private void fechaHoy() {                                            
+    private void fechaiHoy() {                                            
         try {
             // TODO add your handling code here:
             Cconexion conexion = new Cconexion();
@@ -107,9 +107,29 @@ public class manten_ins extends javax.swing.JFrame {
             }
             SimpleDateFormat formateador = new SimpleDateFormat("yyyy-MM-dd");
 
-            //Fecha.setText(formateador.format(num));
-            //Fecha.setEnabled(false);
-            //Fecha.setEditable(false);
+            Fechai.setText(formateador.format(num));
+            Fechai.setEnabled(false);
+            Fechai.setEditable(false);
+        } catch (SQLException ex) {
+            Logger.getLogger(manten_ins.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    private void fechafHoy() {                                            
+        try {
+            // TODO add your handling code here:
+            Cconexion conexion = new Cconexion();
+            String fecha = "SELECT to_char(current_timestamp AT TIME ZONE 'UTC', 'YYYY-MM-DD');";
+            java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+            java.sql.ResultSet rs = st.executeQuery(fecha);
+            Date num = null;
+            while(rs.next()){
+            num = rs.getDate(1);
+            }
+            SimpleDateFormat formateador = new SimpleDateFormat("yyyy-MM-dd");
+
+            Fechaf.setText(formateador.format(num));
+            Fechaf.setEnabled(false);
+            Fechaf.setEditable(false);
         } catch (SQLException ex) {
             Logger.getLogger(manten_ins.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -213,7 +233,7 @@ public class manten_ins extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Agregar Compra");
+        jLabel1.setText("Agregar Mantenimiento");
 
         id.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         id.setForeground(new java.awt.Color(255, 255, 255));
@@ -519,29 +539,22 @@ public class manten_ins extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panel_reset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(112, 112, 112))
-            .addGroup(FondoLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FondoLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
                     .addGroup(FondoLayout.createSequentialGroup()
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Proy, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_c5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(label_c5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Proy, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FondoLayout.createSequentialGroup()
-                                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(FondoLayout.createSequentialGroup()
-                                        .addGap(55, 55, 55)
-                                        .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(label_c3)
-                                            .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(Btm, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(FondoLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Fechai)))
+                                .addGap(29, 29, 29)
+                                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(label_c3)
+                                    .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(Btm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Fechai))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -550,13 +563,13 @@ public class manten_ins extends javax.swing.JFrame {
                                     .addComponent(label_c4))
                                 .addGap(26, 26, 26))
                             .addGroup(FondoLayout.createSequentialGroup()
-                                .addGap(223, 223, 223)
+                                .addGap(197, 197, 197)
                                 .addComponent(Btm1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(38, 38, 38)))
                         .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_c2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Personal, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51))))
+                            .addComponent(Personal, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(24, 24, 24))
         );
         FondoLayout.setVerticalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -629,11 +642,11 @@ public class manten_ins extends javax.swing.JFrame {
     private void BtmItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_BtmItemStateChanged
         // TODO add your handling code here:
         if(Btm.isSelected())
-        fechaHoy();
+        fechaiHoy();
         else{
-          //  Fecha.setText(null);
-          //  Fecha.setEnabled(true);
-          //  Fecha.setEditable(true);
+            Fechai.setText(null);
+            Fechai.setEnabled(true);
+            Fechai.setEditable(true);
         }
     }//GEN-LAST:event_BtmItemStateChanged
 
@@ -704,7 +717,7 @@ public class manten_ins extends javax.swing.JFrame {
 
     private void login_btm2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm2MouseClicked
         
-        //new Ccompras().insertarCompra(Fecha, Personal);
+        new Cmanten().insertarManten(Proy, Fechai, Fechaf, Personal, jTextArea1);
         setVisible(false);
         
     }//GEN-LAST:event_login_btm2MouseClicked
@@ -748,6 +761,13 @@ public class manten_ins extends javax.swing.JFrame {
 
     private void Btm1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_Btm1ItemStateChanged
         // TODO add your handling code here:
+        if(Btm1.isSelected())
+        fechafHoy();
+        else{
+            Fechaf.setText(null);
+            Fechaf.setEnabled(true);
+            Fechaf.setEditable(true);
+        }
     }//GEN-LAST:event_Btm1ItemStateChanged
 
     private void Btm1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Btm1FocusGained

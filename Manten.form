@@ -303,12 +303,13 @@
               <Font name="Roboto Light" size="18" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="6">
                 <StringItem index="0" value="&#xa0;"/>
                 <StringItem index="1" value="id"/>
-                <StringItem index="2" value="fecha"/>
-                <StringItem index="3" value="provedor"/>
-                <StringItem index="4" value="materiales"/>
+                <StringItem index="2" value="proyecto"/>
+                <StringItem index="3" value="fecha_i"/>
+                <StringItem index="4" value="fecha_f"/>
+                <StringItem index="5" value="personal"/>
               </StringArray>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
