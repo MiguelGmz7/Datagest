@@ -67,9 +67,38 @@ public class Ccompras {
         this.activo = activo;
     }
     
+    public void buscarInsumo(JTable para_clientes, JComboBox campo, JTextField busqueda) {
+        String bsq = busqueda.getText();
+        String cam = campo.getSelectedItem().toString();
+        
+        Cconexion conexion = new Cconexion();
+        DefaultTableModel modelo = new DefaultTableModel();
+        String sql = "select * from compra_plus where "+cam+" = '"+bsq+"';";
+        
+        modelo.addColumn("ID");
+        modelo.addColumn("Material");
+        modelo.addColumn("Cantidad");
+        
+        String[] datos = new String[3];
+        
+        try{
+            java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+            java.sql.ResultSet rs = st.executeQuery(sql);
+            
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                
+                modelo.addRow(datos);
+            }
+            para_clientes.setModel(modelo);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
     
-    
-    public void insumoModificar(int registro, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
+    public void insumoModificar(JLabel compra, JComboBox material, JTextField cantidad) throws SQLException{
         Cconexion conexion = new Cconexion();
         try{
         String id_insumo = "select material_id from insumos_en_stock where nombre = '"+material.getSelectedItem().toString()+"';";
@@ -79,12 +108,11 @@ public class Ccompras {
         while(rs.next())
         num = rs.getInt(1);
         
-        String update = "update maquina_insumos set insumo = ?, cantidad = ?, activo = ? where id = "+registro+";";
+        String update = "update compra_materiales set material = ?, cantidad = ? where id = "+compra.getText()+";";
         
             java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
             cs.setInt(1, num);
             cs.setInt(2, Integer.parseInt(cantidad.getText()));
-            cs.setBoolean(3, activo.isSelected());
             cs.execute();
             
             JOptionPane.showMessageDialog(null,"Se modfico correctamente la información","INSERTAR",JOptionPane.INFORMATION_MESSAGE);

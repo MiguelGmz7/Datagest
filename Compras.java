@@ -19,6 +19,8 @@ public class Compras extends javax.swing.JFrame {
     compras_mod mod;
     compras_ins_plus ins;
     Ccompras view;
+    compras_mod_plus modp;
+    
 /**
      * Creates new form Compras
      */
@@ -27,6 +29,7 @@ public class Compras extends javax.swing.JFrame {
         this.mod = new compras_mod();
         this.ins = new compras_ins_plus();
         this.view = new Ccompras();
+        this.modp = new compras_mod_plus();
         initComponents();
         new Ccompras().mostrarCompras(Tb_clientes5);
     }
@@ -390,41 +393,25 @@ public class Compras extends javax.swing.JFrame {
                 
                 Modificar.setEnabled(true);
                 Materiales.setEnabled(true);
-                material = true;
                 
                 
             } catch (SQLException ex) {
                 Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-            /*
-            mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
-            est.setMaquina_id(Integer.parseInt(idm));
-            try {
-                insumo_mod.setMaquina(Integer.parseInt(idm));
-            } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            try {
-                materiales.setMaquina(Integer.parseInt(idm));
-            } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            login_btm25.setEnabled(true);
-            login_btm26.setEnabled(true);
         } else {
-            String idmod = seleccionarParam(Tb_clientes5, 0);
-            String insumod = seleccionarParam(Tb_clientes5, 1);
-            String cantidadm = seleccionarParam(Tb_clientes5, 2);
-            String activom = seleccionarParam(Tb_clientes5, 3);
             try {
-                insumo_mod.setParam(idmod,insumod,cantidadm, activom);
+                new Ccompras().seleccionarCompra(Tb_clientes5, Registro_field5, Campo_combo5);
+                String idm = new Menu().seleccionarParam(Tb_clientes5, 0);
+                String materialm = new Menu().seleccionarParam(Tb_clientes5, 1);
+                String cantidadm = new Menu().seleccionarParam(Tb_clientes5, 2);
+                
+                modp.setMod(idm, materialm, cantidadm);
+                
             } catch (SQLException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        */
+            
     }//GEN-LAST:event_Tb_clientes5MouseClicked
 
     private void login_btm22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm22MouseClicked
@@ -515,7 +502,7 @@ public class Compras extends javax.swing.JFrame {
             mod.setVisible(true);
         }
         else{
-            //insumo_mod.setVisible(true);
+            modp.setVisible(true);
         }
         
     }//GEN-LAST:event_ModificarMouseClicked
