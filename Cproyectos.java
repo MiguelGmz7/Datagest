@@ -4,6 +4,7 @@
  */
 package com.app;
 
+import java.awt.HeadlessException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -182,7 +183,7 @@ public class Cproyectos {
             } else {
                 JOptionPane.showMessageDialog(null, "Fila No Seleccionada");
             }
-        }catch(Exception e){
+        }catch(HeadlessException e){
             JOptionPane.showMessageDialog(null, "Error:\n "+e.toString());
         }
     }

@@ -5,6 +5,7 @@
 package com.app;
 
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,11 +15,13 @@ import java.util.logging.Logger;
  */
 public class Compras extends javax.swing.JFrame {
 
-    /**
+    compras_mod mod;
+/**
      * Creates new form Compras
      */
-    private boolean material = false;
-    public Compras() {
+        private boolean material = false;
+    public Compras() throws SQLException {
+        this.mod = new compras_mod();
         initComponents();
         new Ccompras().mostrarCompras(Tb_clientes5);
     }
@@ -45,7 +48,7 @@ public class Compras extends javax.swing.JFrame {
         Campo_combo5 = new javax.swing.JComboBox<>();
         Registro_field5 = new javax.swing.JTextField();
         panel_login23 = new javax.swing.JPanel();
-        login_btm25 = new javax.swing.JLabel();
+        Modificar = new javax.swing.JLabel();
         panel_login24 = new javax.swing.JPanel();
         Materiales = new javax.swing.JLabel();
 
@@ -203,7 +206,7 @@ public class Compras extends javax.swing.JFrame {
         );
 
         Campo_combo5.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "nombre", "materiales", "proporcion", "activo" }));
+        Campo_combo5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "id", "fecha", "provedor", "materiales" }));
         Campo_combo5.setToolTipText("");
         Campo_combo5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,22 +227,22 @@ public class Compras extends javax.swing.JFrame {
             }
         });
 
-        login_btm25.setBackground(new java.awt.Color(247, 199, 196));
-        login_btm25.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        login_btm25.setForeground(new java.awt.Color(249, 249, 249));
-        login_btm25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        login_btm25.setText("MODIFICAR");
-        login_btm25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_btm25.setEnabled(false);
-        login_btm25.addMouseListener(new java.awt.event.MouseAdapter() {
+        Modificar.setBackground(new java.awt.Color(247, 199, 196));
+        Modificar.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        Modificar.setForeground(new java.awt.Color(249, 249, 249));
+        Modificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Modificar.setText("MODIFICAR");
+        Modificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Modificar.setEnabled(false);
+        Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                login_btm25MouseClicked(evt);
+                ModificarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                login_btm25MouseEntered(evt);
+                ModificarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                login_btm25MouseExited(evt);
+                ModificarMouseExited(evt);
             }
         });
 
@@ -247,12 +250,12 @@ public class Compras extends javax.swing.JFrame {
         panel_login23.setLayout(panel_login23Layout);
         panel_login23Layout.setHorizontalGroup(
             panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(login_btm25, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+            .addComponent(Modificar, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
         );
         panel_login23Layout.setVerticalGroup(
             panel_login23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_login23Layout.createSequentialGroup()
-                .addComponent(login_btm25, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -365,16 +368,25 @@ public class Compras extends javax.swing.JFrame {
 
     private void Tb_clientes5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tb_clientes5MouseClicked
         // TODO add your handling code here:
-        /*
+        
         if(material == false){
-            Cmaquinas maquinas = new Cmaquinas();
-            maquinas.seleccionarMaquina(Tb_clientes5, Registro_field5, Campo_combo5);
-
-            String idm = seleccionarParam(Tb_clientes5, 0);
-            String nombrem = seleccionarParam(Tb_clientes5, 1);
-            String proporcionm = seleccionarParam(Tb_clientes5, 3);
-            String activom = seleccionarParam(Tb_clientes5, 4);
-
+            try {
+                //Cmaquinas maquinas = new Cmaquinas();
+                new Ccompras().seleccionarCompra(Tb_clientes5, Registro_field5, Campo_combo5);
+                
+                String idm = new Menu().seleccionarParam(Tb_clientes5, 0);
+                String fecham = new Menu().seleccionarParam(Tb_clientes5, 1);
+                String provedorm = new Menu().seleccionarParam(Tb_clientes5, 2);
+                
+                
+                mod.setCompra(idm, fecham, provedorm);
+                Modificar.setEnabled(true);
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+            /*
             mod4.setMaquinaMod(idm, nombrem, proporcionm, activom);
             est.setMaquina_id(Integer.parseInt(idm));
             try {
@@ -460,7 +472,7 @@ public class Compras extends javax.swing.JFrame {
 
     private void login_btm24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm24MouseClicked
         // TODO add your handling code here:
-        new Cmaquinas().BuscarMaquina(Tb_clientes5, Campo_combo5, Registro_field5);
+        new Ccompras().buscarCompra(Tb_clientes5, Campo_combo5, Registro_field5);
         Registro_field5.setText("");
         Campo_combo5.setSelectedIndex(0);
     }//GEN-LAST:event_login_btm24MouseClicked
@@ -485,25 +497,25 @@ public class Compras extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Campo_combo5ActionPerformed
 
-    private void login_btm25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseClicked
+    private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
         // TODO add your handling code here:
-        /*
+        
         if(material == false){
-            mod4.setVisible(true);
+            mod.setVisible(true);
         }
         else{
-            insumo_mod.setVisible(true);
+            //insumo_mod.setVisible(true);
         }
-        */
-    }//GEN-LAST:event_login_btm25MouseClicked
+        
+    }//GEN-LAST:event_ModificarMouseClicked
 
-    private void login_btm25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseEntered
+    private void ModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm25MouseEntered
+    }//GEN-LAST:event_ModificarMouseEntered
 
-    private void login_btm25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btm25MouseExited
+    private void ModificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_login_btm25MouseExited
+    }//GEN-LAST:event_ModificarMouseExited
 
     private void panel_login23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_login23MouseEntered
         // TODO add your handling code here:
@@ -568,7 +580,11 @@ public class Compras extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Compras().setVisible(true);
+                try {
+                    new Compras().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -576,6 +592,7 @@ public class Compras extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Campo_combo5;
     private javax.swing.JLabel Materiales;
+    private javax.swing.JLabel Modificar;
     private javax.swing.JTextField Registro_field5;
     private javax.swing.JTable Tb_clientes5;
     private javax.swing.JLabel jLabel14;
@@ -584,7 +601,6 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JLabel login_btm22;
     private javax.swing.JLabel login_btm23;
     private javax.swing.JLabel login_btm24;
-    private javax.swing.JLabel login_btm25;
     private javax.swing.JPanel panel_login20;
     private javax.swing.JPanel panel_login21;
     private javax.swing.JPanel panel_login22;

@@ -200,7 +200,7 @@ public class Ccompras {
         }
     }
     
-    public void seleccionarMaquina(JTable Para_clientes, JTextField busqueda, JComboBox campo) {
+    public void seleccionarCompra(JTable Para_clientes, JTextField busqueda, JComboBox campo) {
         try {
             int fila = Para_clientes.getSelectedRow();
             int colum = Para_clientes.getSelectedColumn();
@@ -218,30 +218,24 @@ public class Ccompras {
         }
     }
     
-    public void modificarMaquina(String id, JTextField nombre, JTextField proporcion, JRadioButton activo){
-        try{
-        //String sql_id = "select  provedor_id from provedores where nombre = '"+prenombre+"';";
+    public void modificarCompra(JLabel id, JTextField fecha, JComboBox provedores){
         Cconexion conexion = new Cconexion();
         
-        //java.sql.Statement st = conexion.EstablecerConexion().createStatement();
-        //java.sql.ResultSet rs = st.executeQuery(sql_id);
+        int idp = 0;
         
-            //String id = rs.getString("provedor_id");
+        try{
+        String sql_id = "select provedor_id from provedores where nombre = '"+provedores.getSelectedItem()+"';";
+        java.sql.Statement st = conexion.EstablecerConexion().createStatement();
+        java.sql.ResultSet rs = st.executeQuery(sql_id);
+        
+        while(rs.next())
+        idp = rs.getInt(1);
             
-            setNombre(nombre.getText());
-            setProporcion(proporcion.getText());
-            setActivo(activo.isSelected());
-            
-            String update = "update maquinas set nombre = ?, proporcion = ?, activo = ? where id = "+id+";";
-        java.sql.CallableStatement cs = conexion.EstablecerConexion().prepareCall(update);
-            cs.setString(1, getNombre());
-            cs.setString(2, getProporcion());
-            cs.setBoolean(3, isActivo());
-            cs.execute();
+        String update = "update compras set fecha = '"+fecha.getText()+"', provedor = "+idp+" where id = "+id.getText()+";";
+        java.sql.Statement stm = conexion.EstablecerConexion().createStatement();
+        stm.execute(update); 
+        
         JOptionPane.showMessageDialog(null,"Se Modifico correctamente la información","MODIFICAR",JOptionPane.INFORMATION_MESSAGE);
-        
-       
-        
 
         }catch(SQLException e){
         JOptionPane.showMessageDialog(null,e.toString(),"Error",JOptionPane.ERROR_MESSAGE);
@@ -249,21 +243,20 @@ public class Ccompras {
         }
     }
     
-    public void BuscarMaquina(JTable para_clientes, JComboBox campo, JTextField busqueda) {
+    public void buscarCompra(JTable para_clientes, JComboBox campo, JTextField busqueda) {
         String bsq = busqueda.getText();
         String cam = campo.getSelectedItem().toString();
         
         Cconexion conexion = new Cconexion();
         DefaultTableModel modelo = new DefaultTableModel();
-        String sql = "select * from vista_maquinas where "+cam+" = '"+bsq+"';";
+        String sql = "select * from vista_compras where "+cam+" = '"+bsq+"';";
         
         modelo.addColumn("ID");
-        modelo.addColumn("Nombre");
+        modelo.addColumn("Fecha");
+        modelo.addColumn("Proveedor");
         modelo.addColumn("Materiales");
-        modelo.addColumn("Proporcion");
-        modelo.addColumn("Activo");
         
-        String[] datos = new String[5];
+        String[] datos = new String[4];
         
         try{
             java.sql.Statement st = conexion.EstablecerConexion().createStatement();
@@ -274,7 +267,6 @@ public class Ccompras {
                 datos[1] = rs.getString(2);
                 datos[2] = rs.getString(3);
                 datos[3] = rs.getString(4);
-                datos[4] = rs.getString(5);
                 
                 modelo.addRow(datos);
             }
