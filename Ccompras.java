@@ -15,24 +15,32 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Ccompras {
     
-    private int maquina_id, materiales;
+    private int id, material, cantidad;
     private String nombre, proporcion;
     private boolean activo;
 
-    public int getMaquina_id() {
-        return maquina_id;
+    public int getId() {
+        return id;
     }
 
-    public void setMaquina_id(int maquina_id) {
-        this.maquina_id = maquina_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getMateriales() {
-        return materiales;
+    public int getMaterial() {
+        return material;
     }
 
-    public void setMateriales(int materiales) {
-        this.materiales = materiales;
+    public void setMaterial(int material) {
+        this.material = material;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {
@@ -58,6 +66,8 @@ public class Ccompras {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+    
+    
     
     public void insumoModificar(int registro, JComboBox material, JTextField cantidad, JRadioButton activo) throws SQLException{
         Cconexion conexion = new Cconexion();
@@ -113,14 +123,13 @@ public class Ccompras {
         
     DefaultTableModel modelo = new DefaultTableModel();
     
-    String sql = "select * from insumos_aso where maquina = "+getMaquina_id()+";";
+    String sql = "select id,nombre,cantidad from compra_plus where compra = "+getId()+";";
         
     modelo.addColumn("ID");
     modelo.addColumn("Material");
-    modelo.addColumn("Cantidad Usada");
-    modelo.addColumn("Activo");
+    modelo.addColumn("Cantidad");
     
-    String[] datos = new String[4];
+    String[] datos = new String[3];
         
     java.sql.Statement st;
     
@@ -130,9 +139,8 @@ public class Ccompras {
             
             while(rs.next()) {
                 datos[0] = rs.getString(1);
-                datos[1] = rs.getString(3);
-                datos[2] = rs.getString(4);
-                datos[3] = rs.getString(5);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
                 
                 modelo.addRow(datos);
             }

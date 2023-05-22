@@ -16,12 +16,14 @@ import java.util.logging.Logger;
 public class Compras extends javax.swing.JFrame {
 
     compras_mod mod;
+    Ccompras ins;
 /**
      * Creates new form Compras
      */
         private boolean material = false;
     public Compras() throws SQLException {
         this.mod = new compras_mod();
+        this.ins = new Ccompras();
         initComponents();
         new Ccompras().mostrarCompras(Tb_clientes5);
     }
@@ -380,7 +382,11 @@ public class Compras extends javax.swing.JFrame {
                 
                 
                 mod.setCompra(idm, fecham, provedorm);
+                ins.setId(Integer.parseInt(idm));
                 Modificar.setEnabled(true);
+                Materiales.setEnabled(true);
+                material = true;
+                
                 
             } catch (SQLException ex) {
                 Logger.getLogger(Compras.class.getName()).log(Level.SEVERE, null, ex);
@@ -527,11 +533,8 @@ public class Compras extends javax.swing.JFrame {
 
     private void MaterialesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseClicked
         // TODO add your handling code here:
-        //materiales.setVisible(true);
-        /*
-        est.mostrarInsumo(Tb_clientes5);
+        ins.mostrarInsumo(Tb_clientes5);
         material = true;
-        */
     }//GEN-LAST:event_MaterialesMouseClicked
 
     private void MaterialesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaterialesMouseEntered
